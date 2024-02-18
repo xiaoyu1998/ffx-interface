@@ -2,13 +2,7 @@ import { sample, random } from "lodash";
 import { ARBITRUM, ARBITRUM_GOERLI, AVALANCHE, AVALANCHE_FUJI } from "./chains";
 
 const ORACLE_KEEPER_URLS = {
-  [ARBITRUM]: ["https://arbitrum-api.gmxinfra.io", "https://arbitrum-api.gmxinfra2.io"],
-
-  [AVALANCHE]: ["https://avalanche-api.gmxinfra.io", "https://avalanche-api.gmxinfra2.io"],
-
-  [ARBITRUM_GOERLI]: ["https://gmx-synthetics-api-arb-goerli-4vgxk.ondigitalocean.app"],
-
-  [AVALANCHE_FUJI]: ["https://synthetics-api-avax-fuji-upovm.ondigitalocean.app"],
+  [ARBITRUM]: ["https://arbitrum-api.gmxinfra.io"],
 };
 
 export function getOracleKeeperUrl(chainId: number, index: number) {
@@ -32,16 +26,19 @@ export function getOracleKeeperNextIndex(chainId: number, currentIndex: number) 
 }
 
 export function getOracleKeeperRandomIndex(chainId: number, bannedIndexes?: number[]): number {
-  const urls = ORACLE_KEEPER_URLS[chainId];
+  return 0;
+  // const urls = ORACLE_KEEPER_URLS[chainId];
 
-  if (bannedIndexes?.length) {
-    const filteredUrls = urls.filter((url, i) => !bannedIndexes.includes(i));
+  // console.log(urls);
 
-    if (filteredUrls.length) {
-      const url = sample(filteredUrls);
-      return urls.indexOf(url);
-    }
-  }
+  // if (bannedIndexes?.length) {
+  //   const filteredUrls = urls.filter((url, i) => !bannedIndexes.includes(i));
 
-  return random(0, urls.length - 1);
+  //   if (filteredUrls.length) {
+  //     const url = sample(filteredUrls);
+  //     return urls.indexOf(url);
+  //   }
+  // }
+
+  // return random(0, urls.length - 1);
 }

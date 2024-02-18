@@ -11,51 +11,48 @@ export const ENV_AVALANCHE_RPC_URLS = process.env.REACT_APP_AVALANCHE_RPC_URLS;
 export const BSС_MAINNET = 56;
 export const BSС_TESTNET = 97;
 export const ETH_MAINNET = 1;
-export const AVALANCHE = 43114;
-export const AVALANCHE_FUJI = 43113;
 export const ARBITRUM = 42161;
 export const ARBITRUM_GOERLI = 421613;
-export const FEES_HIGH_BPS = 50;
+export const AVALANCHE = 43114;
+export const AVALANCHE_FUJI = 43113;
 export const DEFAULT_ALLOWED_SLIPPAGE_BPS = 30;
+export const FEES_HIGH_BPS = 50;
+export const BLAST_LOCALNET = 100;
 
 // TODO take it from web3
 export const DEFAULT_CHAIN_ID = ARBITRUM;
 export const CHAIN_ID = DEFAULT_CHAIN_ID;
 
-export const SUPPORTED_CHAIN_IDS = [ARBITRUM, AVALANCHE];
+export const SUPPORTED_CHAIN_IDS = [ARBITRUM];
 
 if (isDevelopment()) {
-  SUPPORTED_CHAIN_IDS.push(AVALANCHE_FUJI, ARBITRUM_GOERLI);
+  SUPPORTED_CHAIN_IDS.push(BLAST_LOCALNET);
 }
 
 export const IS_NETWORK_DISABLED = {
   [ARBITRUM]: false,
-  [AVALANCHE]: false,
-  [BSС_MAINNET]: false,
+  // [AVALANCHE]: false,
+  // [BSС_MAINNET]: false,
+  [BLAST_LOCALNET]: false,
 };
 
 export const CHAIN_NAMES_MAP = {
-  [BSС_MAINNET]: "BSC",
-  [BSС_TESTNET]: "BSC Testnet",
-  [ARBITRUM_GOERLI]: "Arbitrum Goerli",
   [ARBITRUM]: "Arbitrum",
-  [AVALANCHE]: "Avalanche",
-  [AVALANCHE_FUJI]: "Avalanche Fuji",
+  [BLAST_LOCALNET]: "Blast localnet",
 };
 
 export const GAS_PRICE_ADJUSTMENT_MAP = {
   [ARBITRUM]: "0",
-  [AVALANCHE]: "3000000000", // 3 gwei
+  [BLAST_LOCALNET]: "0",
 };
 
 export const MAX_GAS_PRICE_MAP = {
-  [AVALANCHE]: "200000000000", // 200 gwei
+  [BLAST_LOCALNET]: "200000000000", // 200 gwei
 };
 
 export const HIGH_EXECUTION_FEES_MAP = {
   [ARBITRUM]: 3, // 3 USD
-  [AVALANCHE]: 3, // 3 USD
-  [AVALANCHE_FUJI]: 3, // 3 USD
+  [BLAST_LOCALNET]: 3, // 3 USD
 };
 
 export const EXECUTION_FEE_MULTIPLIER_MAP = {
@@ -64,15 +61,13 @@ export const EXECUTION_FEE_MULTIPLIER_MAP = {
   // if gas prices on Ethereum are high, than the gas usage might be higher, this calculation doesn't deal with that
   // case yet
   [ARBITRUM]: 65000,
-  // multiplier for Avalanche is just the average gas usage
-  [AVALANCHE]: 700000,
-  [AVALANCHE_FUJI]: 700000,
+
+  [BLAST_LOCALNET]: 65000,
 };
 
 export const NETWORK_EXECUTION_TO_CREATE_FEE_FACTOR = {
   [ARBITRUM]: BigNumber.from(10).pow(29).mul(5),
-  [AVALANCHE]: BigNumber.from(10).pow(29).mul(35),
-  [AVALANCHE_FUJI]: BigNumber.from(10).pow(29).mul(2),
+  [BLAST_LOCALNET]: BigNumber.from(10).pow(29).mul(5),
 } as const;
 
 export const EXECUTION_FEE_CONFIG_V2: {
@@ -81,54 +76,17 @@ export const EXECUTION_FEE_CONFIG_V2: {
     defaultBufferBps?: number;
   };
 } = {
-  [AVALANCHE]: {
-    shouldUseMaxPriorityFeePerGas: true,
-    defaultBufferBps: 1000, // 10%
-  },
-  [AVALANCHE_FUJI]: {
-    shouldUseMaxPriorityFeePerGas: true,
-    defaultBufferBps: 1000, // 10%
-  },
   [ARBITRUM]: {
     shouldUseMaxPriorityFeePerGas: false,
     defaultBufferBps: 1000, // 10%
   },
-  [ARBITRUM_GOERLI]: {
+  [BLAST_LOCALNET]: {
     shouldUseMaxPriorityFeePerGas: false,
     defaultBufferBps: 1000, // 10%
   },
 };
 
 const constants = {
-  [BSС_MAINNET]: {
-    nativeTokenSymbol: "BNB",
-    defaultCollateralSymbol: "BUSD",
-    defaultFlagOrdersEnabled: false,
-    positionReaderPropsLength: 8,
-    v2: false,
-  },
-
-  [BSС_TESTNET]: {
-    nativeTokenSymbol: "BNB",
-    defaultCollateralSymbol: "BUSD",
-    defaultFlagOrdersEnabled: true,
-    positionReaderPropsLength: 8,
-    v2: false,
-  },
-
-  [ARBITRUM_GOERLI]: {
-    nativeTokenSymbol: "ETH",
-    wrappedTokenSymbol: "WETH",
-    defaultCollateralSymbol: "USDC",
-    defaultFlagOrdersEnabled: false,
-    positionReaderPropsLength: 9,
-    v2: true,
-
-    SWAP_ORDER_EXECUTION_GAS_FEE: parseEther("0.0003"),
-    INCREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.0003"),
-    // contract requires that execution fee be strictly greater than instead of gte
-    DECREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.000300001"),
-  },
 
   [ARBITRUM]: {
     nativeTokenSymbol: "ETH",
@@ -143,118 +101,35 @@ const constants = {
     // contract requires that execution fee be strictly greater than instead of gte
     DECREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.000300001"),
   },
-
-  [AVALANCHE]: {
-    nativeTokenSymbol: "AVAX",
-    wrappedTokenSymbol: "WAVAX",
+  [BLAST_LOCALNET]: {
+    nativeTokenSymbol: "BLAST",
+    wrappedTokenSymbol: "WETH",
     defaultCollateralSymbol: "USDC",
-    defaultFlagOrdersEnabled: true,
+    defaultFlagOrdersEnabled: false,
     positionReaderPropsLength: 9,
     v2: true,
 
-    SWAP_ORDER_EXECUTION_GAS_FEE: parseEther("0.01"),
-    INCREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.01"),
+    SWAP_ORDER_EXECUTION_GAS_FEE: parseEther("0.0003"),
+    INCREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.0003"),
     // contract requires that execution fee be strictly greater than instead of gte
-    DECREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.0100001"),
+    DECREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.000300001"),
   },
 
-  [AVALANCHE_FUJI]: {
-    nativeTokenSymbol: "AVAX",
-    wrappedTokenSymbol: "WAVAX",
-    defaultCollateralSymbol: "USDC",
-    defaultFlagOrdersEnabled: true,
-    positionReaderPropsLength: 9,
-    v2: true,
-
-    SWAP_ORDER_EXECUTION_GAS_FEE: parseEther("0.01"),
-    INCREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.01"),
-    // contract requires that execution fee be strictly greater than instead of gte
-    DECREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.0100001"),
-  },
 };
 
 const ALCHEMY_WHITELISTED_DOMAINS = ["gmx.io", "app.gmx.io"];
 
 export const RPC_PROVIDERS = {
-  [ETH_MAINNET]: ["https://rpc.ankr.com/eth"],
-  [BSС_MAINNET]: [
-    "https://bsc-dataseed.binance.org",
-    "https://bsc-dataseed1.defibit.io",
-    "https://bsc-dataseed1.ninicoin.io",
-    "https://bsc-dataseed2.defibit.io",
-    "https://bsc-dataseed3.defibit.io",
-    "https://bsc-dataseed4.defibit.io",
-    "https://bsc-dataseed2.ninicoin.io",
-    "https://bsc-dataseed3.ninicoin.io",
-    "https://bsc-dataseed4.ninicoin.io",
-    "https://bsc-dataseed1.binance.org",
-    "https://bsc-dataseed2.binance.org",
-    "https://bsc-dataseed3.binance.org",
-    "https://bsc-dataseed4.binance.org",
-  ],
-  [BSС_TESTNET]: ["https://data-seed-prebsc-1-s1.binance.org:8545/"],
   [ARBITRUM]: ["https://arb1.arbitrum.io/rpc"],
-  [ARBITRUM_GOERLI]: [
-    "https://goerli-rollup.arbitrum.io/rpc",
-    // "https://endpoints.omniatech.io/v1/arbitrum/goerli/public",
-    // "https://arbitrum-goerli.public.blastapi.io",
-  ],
-  [AVALANCHE]: ["https://api.avax.network/ext/bc/C/rpc"],
-  [AVALANCHE_FUJI]: [
-    "https://avalanche-fuji-c-chain.publicnode.com",
-    "https://api.avax-test.network/ext/bc/C/rpc",
-    // "https://ava-testnet.public.blastapi.io/v1/avax/fuji/public",
-    // "https://rpc.ankr.com/avalanche_fuji",
-  ],
+  [BLAST_LOCALNET]: ["http://192.168.2.106:8545"],
 };
 
 export const FALLBACK_PROVIDERS = {
   [ARBITRUM]: ENV_ARBITRUM_RPC_URLS ? JSON.parse(ENV_ARBITRUM_RPC_URLS) : [getAlchemyHttpUrl()],
-  [AVALANCHE]: ENV_AVALANCHE_RPC_URLS
-    ? JSON.parse(ENV_AVALANCHE_RPC_URLS)
-    : ["https://avax-mainnet.gateway.pokt.network/v1/lb/626f37766c499d003aada23b"],
-  [AVALANCHE_FUJI]: [
-    "https://endpoints.omniatech.io/v1/avax/fuji/public",
-    "https://api.avax-test.network/ext/bc/C/rpc",
-    "https://ava-testnet.public.blastapi.io/ext/bc/C/rpc",
-  ],
-  [ARBITRUM_GOERLI]: ["https://arb-goerli.g.alchemy.com/v2/cZfd99JyN42V9Clbs_gOvA3GSBZH1-1j"],
+  [BLAST_LOCALNET]: ["http://192.168.2.106:8545"],
 };
 
 export const NETWORK_METADATA: { [chainId: number]: NetworkMetadata } = {
-  [BSС_MAINNET]: {
-    chainId: "0x" + BSС_MAINNET.toString(16),
-    chainName: "BSC",
-    nativeCurrency: {
-      name: "BNB",
-      symbol: "BNB",
-      decimals: 18,
-    },
-    rpcUrls: RPC_PROVIDERS[BSС_MAINNET],
-    blockExplorerUrls: ["https://bscscan.com"],
-  },
-  [BSС_TESTNET]: {
-    chainId: "0x" + BSС_TESTNET.toString(16),
-    chainName: "BSC Testnet",
-    nativeCurrency: {
-      name: "BNB",
-      symbol: "BNB",
-      decimals: 18,
-    },
-    rpcUrls: RPC_PROVIDERS[BSС_TESTNET],
-    blockExplorerUrls: ["https://testnet.bscscan.com/"],
-  },
-  [ARBITRUM_GOERLI]: {
-    chainId: "0x" + ARBITRUM_GOERLI.toString(16),
-    chainName: "Arbitrum Goerli Testnet",
-    nativeCurrency: {
-      name: "ETH",
-      symbol: "ETH",
-      decimals: 18,
-    },
-    rpcUrls: RPC_PROVIDERS[ARBITRUM_GOERLI],
-    blockExplorerUrls: ["https://goerli.arbiscan.io/"],
-  },
   [ARBITRUM]: {
     chainId: "0x" + ARBITRUM.toString(16),
     chainName: "Arbitrum",
@@ -266,27 +141,16 @@ export const NETWORK_METADATA: { [chainId: number]: NetworkMetadata } = {
     rpcUrls: RPC_PROVIDERS[ARBITRUM],
     blockExplorerUrls: [getExplorerUrl(ARBITRUM)],
   },
-  [AVALANCHE]: {
-    chainId: "0x" + AVALANCHE.toString(16),
-    chainName: "Avalanche",
+  [BLAST_LOCALNET]: {
+    chainId: "0x" + BLAST_LOCALNET.toString(16),
+    chainName: "blast",
     nativeCurrency: {
-      name: "AVAX",
-      symbol: "AVAX",
+      name: "BLAST",
+      symbol: "BLAST",
       decimals: 18,
     },
-    rpcUrls: RPC_PROVIDERS[AVALANCHE],
-    blockExplorerUrls: [getExplorerUrl(AVALANCHE)],
-  },
-  [AVALANCHE_FUJI]: {
-    chainId: "0x" + AVALANCHE_FUJI.toString(16),
-    chainName: "Avalanche Fuji Testnet",
-    nativeCurrency: {
-      name: "AVAX",
-      symbol: "AVAX",
-      decimals: 18,
-    },
-    rpcUrls: RPC_PROVIDERS[AVALANCHE_FUJI],
-    blockExplorerUrls: [getExplorerUrl(AVALANCHE_FUJI)],
+    rpcUrls: RPC_PROVIDERS[BLAST_LOCALNET],
+    blockExplorerUrls: [getExplorerUrl(BLAST_LOCALNET)],
   },
 };
 
@@ -344,6 +208,8 @@ export function getExplorerUrl(chainId) {
   } else if (chainId === AVALANCHE) {
     return "https://snowtrace.io/";
   } else if (chainId === AVALANCHE_FUJI) {
+    return "https://testnet.snowtrace.io/";
+  } else if (chainId === BLAST_LOCALNET) {
     return "https://testnet.snowtrace.io/";
   }
   return "https://etherscan.io/";
