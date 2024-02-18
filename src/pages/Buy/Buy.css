@@ -1,0 +1,13 @@
+.BuyFFX {
+  background: #101124;
+  justify-content: space-between;
+}
+
+.BuyFFX-container {
+  padding: 0 0 3.1rem 0;
+  width: 100%;
+}
+
+.BuyFFX-container .section-title-content {
+  justify-content: flex-start;
+}
