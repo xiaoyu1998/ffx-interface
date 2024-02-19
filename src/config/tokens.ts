@@ -452,9 +452,9 @@ export function convertTokenAddress(chainId: number, address: string, convertTo?
     return wrappedToken.address;
   }
 
-  if (convertTo === "native" && address === wrappedTokenAddress) {
-    return NATIVE_TOKEN_ADDRESS;
-  }
+  // if (convertTo === "native" && address === wrappedTokenAddress) {
+  //   return NATIVE_TOKEN_ADDRESS;
+  // }
 
   return address;
 }
