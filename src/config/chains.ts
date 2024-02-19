@@ -23,11 +23,11 @@ export const BLAST_LOCALNET = 100;
 export const DEFAULT_CHAIN_ID = ARBITRUM;
 export const CHAIN_ID = DEFAULT_CHAIN_ID;
 
-export const SUPPORTED_CHAIN_IDS = [ARBITRUM];
+export const SUPPORTED_CHAIN_IDS = [ARBITRUM, BLAST_LOCALNET];
 
-if (isDevelopment()) {
-  SUPPORTED_CHAIN_IDS.push(BLAST_LOCALNET);
-}
+// if (isDevelopment()) {
+//   SUPPORTED_CHAIN_IDS.push(BLAST_LOCALNET);
+// }
 
 export const IS_NETWORK_DISABLED = {
   [ARBITRUM]: false,

@@ -1,8 +1,6 @@
-import { ARBITRUM, ARBITRUM_GOERLI, AVALANCHE, AVALANCHE_FUJI } from "config/chains";
+import { ARBITRUM,  BLAST_LOCALNET} from "config/chains";
 import arbitrum from "img/ic_arbitrum_24.svg";
-import avalanche from "img/ic_avalanche_24.svg";
-import avalancheTestnet from "img/ic_avalanche_testnet_24.svg";
-import arbitrumGoerli from "img/ic_arbitrum_goerli_24.svg";
+import blast_localnet from "img/ic_gmx_blast_24.svg";
 
 import gmxIcon from "img/ic_gmx_40.svg";
 import gmxOutlineIcon from "img/ic_gmxv1flat.svg";
@@ -18,6 +16,8 @@ import gmxAvax from "img/ic_gmx_avax.svg";
 import glpArbitrum from "img/ic_glp_arbitrum.svg";
 import glpAvax from "img/ic_glp_avalanche.svg";
 
+import gmxBlast from "img/ic_gmx_blast.svg";
+
 const ICONS = {
   [ARBITRUM]: {
     network: arbitrum,
@@ -26,24 +26,12 @@ const ICONS = {
     esgmx: esGMXArbitrumIcon,
     gm: gmArbitrum,
   },
-  [AVALANCHE]: {
-    network: avalanche,
+  [BLAST_LOCALNET]: {
+    network: blast_localnet,
     gmx: gmxAvax,
     glp: glpAvax,
     esgmx: esGMXAvaxIcon,
     gm: gmAvax,
-  },
-  [ARBITRUM_GOERLI]: {
-    network: arbitrumGoerli,
-    gmx: gmxArbitrum,
-    glp: glpArbitrum,
-    gm: gmArbitrum,
-  },
-  [AVALANCHE_FUJI]: {
-    network: avalancheTestnet,
-    gm: gmAvax,
-    gmx: gmxAvax,
-    glp: glpAvax,
   },
   common: {
     gmx: gmxIcon,
