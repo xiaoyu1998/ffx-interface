@@ -1,5 +1,6 @@
 import CustomErrors from "abis/CustomErrors.json";
-import { ARBITRUM, ARBITRUM_GOERLI, AVALANCHE, AVALANCHE_FUJI, getFallbackRpcUrl, getRpcUrl } from "config/chains";
+import { ARBITRUM, BLAST_LOCALNET, getFallbackRpcUrl, getRpcUrl } from "config/chains";
+import { getContract } from "config/contracts";
 import { PublicClient, createPublicClient, http } from "viem";
 import { arbitrum, arbitrumGoerli, avalanche, avalancheFuji } from "viem/chains";
 import { MulticallRequestConfig, MulticallResult } from "./types";
@@ -10,10 +11,8 @@ import { Signer } from "ethers";
 export const MAX_TIMEOUT = 20000;
 
 const CHAIN_BY_CHAIN_ID = {
-  [AVALANCHE_FUJI]: avalancheFuji,
-  [ARBITRUM_GOERLI]: arbitrumGoerli,
   [ARBITRUM]: arbitrum,
-  [AVALANCHE]: avalanche,
+  [BLAST_LOCALNET]: 100,
 };
 
 const BATCH_CONFIGS = {
@@ -29,31 +28,7 @@ const BATCH_CONFIGS = {
       },
     },
   },
-  [AVALANCHE]: {
-    http: {
-      batchSize: 0,
-      wait: 0,
-    },
-    client: {
-      multicall: {
-        batchSize: 1024 * 1024,
-        wait: 0,
-      },
-    },
-  },
-  [AVALANCHE_FUJI]: {
-    http: {
-      batchSize: 40,
-      wait: 0,
-    },
-    client: {
-      multicall: {
-        batchSize: 1024 * 1024,
-        wait: 0,
-      },
-    },
-  },
-  [ARBITRUM_GOERLI]: {
+  [BLAST_LOCALNET]: {
     http: {
       batchSize: 0,
       wait: 0,
@@ -115,9 +90,11 @@ export class Multicall {
   }
 
   viemClient: PublicClient;
+  multicallAddress: any;
 
   constructor(public chainId: number, public rpcUrl: string) {
     this.viemClient = Multicall.getViemClient(chainId, rpcUrl);
+    this.multicallAddress = getContract(chainId, "Multicall");
   }
 
   async call(request: MulticallRequestConfig<any>, maxTimeout: number) {
@@ -167,7 +144,10 @@ export class Multicall {
     });
 
     const response: any = await Promise.race([
-      this.viemClient.multicall({ contracts: encodedPayload as any }),
+      this.viemClient.multicall({ 
+        contracts: encodedPayload as any,
+        multicallAddress: this.multicallAddress
+      }),
       sleep(maxTimeout).then(() => Promise.reject(new Error("multicall timeout"))),
     ]).catch((_viemError) => {
       const e = new Error(_viemError.message.slice(0, 150));

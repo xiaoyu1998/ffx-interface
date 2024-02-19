@@ -40,21 +40,6 @@ const NETWORK_OPTIONS = [
   },
 ];
 
-// if (isDevelopment()) {
-//   NETWORK_OPTIONS.push({
-//     label: getChainName(ARBITRUM_GOERLI),
-//     value: ARBITRUM_GOERLI,
-//     icon: getIcon(ARBITRUM_GOERLI, "network"),
-//     color: "#264f79",
-//   });
-//   NETWORK_OPTIONS.push({
-//     label: getChainName(AVALANCHE_FUJI),
-//     value: AVALANCHE_FUJI,
-//     icon: getIcon(AVALANCHE_FUJI, "network"),
-//     color: "#E841424D",
-//   });
-// }
-
 export function AppHeaderUser({
   openSettings,
   small,

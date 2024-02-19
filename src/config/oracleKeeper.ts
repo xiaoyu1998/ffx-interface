@@ -1,8 +1,9 @@
 import { sample, random } from "lodash";
-import { ARBITRUM, ARBITRUM_GOERLI, AVALANCHE, AVALANCHE_FUJI } from "./chains";
+import { ARBITRUM, BLAST_LOCALNET } from "./chains";
 
 const ORACLE_KEEPER_URLS = {
   [ARBITRUM]: ["https://arbitrum-api.gmxinfra.io"],
+  [BLAST_LOCALNET]: ["https://arbitrum-api.gmxinfra.io"],
 };
 
 export function getOracleKeeperUrl(chainId: number, index: number) {

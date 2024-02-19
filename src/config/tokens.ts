@@ -253,7 +253,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
     {
       name: "USD Coin",
       symbol: "USDC",
-      address: "0x97B335773d1EDb9F4311AD4Dd700cDed0D837b6B",
+      address: "0x30786717648453CEAb568a41CC245952eb8b0f38",
       decimals: 6,
       isStable: true,
       imageUrl: "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
@@ -264,7 +264,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       name: "Tether",
       symbol: "USDT",
       decimals: 6,
-      address: "0xF9E47E1b5C1E36d0Be3fB8Decf91474e90AA9b17",
+      address: "0xE8481ae166aB95D83E67182175953abDBE59F5ba",
       isStable: true,
       imageUrl: "https://assets.coingecko.com/coins/images/325/small/Tether-logo.png",
       coingeckoUrl: "https://www.coingecko.com/en/coins/dai",
@@ -273,7 +273,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
     {
       name: "Dai",
       symbol: "DAI",
-      address: "0x59e615163fc5B6C7CAFc744607A050B87D4c6f52",
+      address: "0xf705456C354B1bdac88F561822B32ff67a549E15",
       decimals: 6,
       isStable: true,
       imageUrl: "https://assets.coingecko.com/coins/images/9956/thumb/4943.png?1636636734",
@@ -284,7 +284,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       name: "Bitcoin (WBTC)",
       symbol: "WBTC",
       decimals: 8,
-      address: "0xea769995AB0F7e71D83338C4d5f5B01b7E868E3C",
+      address: "0x0D914eBdC0D794da71EbE8Dc2e80Ab50F486ab5A",
       imageUrl: "https://assets.coingecko.com/coins/images/7598/thumb/wrapped_bitcoin_wbtc.png?1548822744",
       coingeckoUrl: "https://www.coingecko.com/en/coins/wrapped-bitcoin",
       explorerUrl: "https://testnet.snowtrace.io/address/0x3Bd8e00c25B12E6E60fc8B6f1E1E2236102073Ca",
@@ -293,9 +293,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       name: "Wrapped Ethereum",
       symbol: "WETH",
       decimals: 18,
-      address: "0x1c19572e1307F875c6Ed5504808145d926908A1d",
-      isWrapped: true,
-      baseSymbol: "ETH",
+      address: "0xB4fa48daB2aA33D4e9571B646419F297eb0d5eb7",
       imageUrl: "https://assets.coingecko.com/coins/images/2518/thumb/weth.png?1628852295",
       coingeckoUrl: "https://www.coingecko.com/en/coins/ethereum",
     },
@@ -304,7 +302,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       symbol: "UNI",
       decimals: 18,
       priceDecimals: 3,
-      address: "0xBd5ef77Def89aE8be5486711eBE777f83bEe3a11",
+      address: "0x40c2B26652376b7Ba6b3eDcbDCfEE9D7c6e10591",
       isSynthetic: true,
       coingeckoUrl: "https://www.coingecko.com/en/coins/uniswap",
     },
@@ -312,7 +310,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       name: "Solana",
       symbol: "SOL",
       decimals: 18,
-      address: "0xDa6EaAbf668798F46D391f05323F17Fe4136f630",
+      address: "0x9F7f6F1b114eec995Ecf24DB58FF335bB662c81E",
       isSynthetic: true,
       imageUrl: "https://assets.coingecko.com/coins/images/4128/small/solana.png?1640133422",
       coingeckoUrl: "https://www.coingecko.com/en/coins/solana",
@@ -357,6 +355,7 @@ for (let j = 0; j < CHAIN_IDS.length; j++) {
   let wrappedTokenAddress: string | undefined;
 
   //console.log(tokens.length);
+  //WRAPPED_TOKENS_MAP[chainId] = new Token();
 
   for (let i = 0; i < tokens.length; i++) {
     const token = tokens[i];
@@ -445,12 +444,13 @@ export function getTokenBySymbol(chainId: number, symbol: string) {
 
 export function convertTokenAddress(chainId: number, address: string, convertTo?: "wrapped" | "native") {
   const wrappedToken = getWrappedToken(chainId);
+  const wrappedTokenAddress = wrappedToken?wrappedToken.address:ethers.constants.AddressZero;
 
   if (convertTo === "wrapped" && address === NATIVE_TOKEN_ADDRESS) {
     return wrappedToken.address;
   }
 
-  if (convertTo === "native" && address === wrappedToken.address) {
+  if (convertTo === "native" && address === wrappedTokenAddress) {
     return NATIVE_TOKEN_ADDRESS;
   }
 
