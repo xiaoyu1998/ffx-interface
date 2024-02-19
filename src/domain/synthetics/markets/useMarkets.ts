@@ -40,7 +40,7 @@ export function useMarkets(chainId: number): MarketsResult {
           }
 
           try {
-            console.log(marketValues);
+            //console.log(marketValues);
             
             const indexToken = getToken(chainId, convertTokenAddress(chainId, marketValues.indexToken, "native"));
             const longToken = getToken(chainId, marketValues.longToken);

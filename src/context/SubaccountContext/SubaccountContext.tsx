@@ -1,6 +1,6 @@
 import { Trans } from "@lingui/macro";
 import DataStore from "abis/DataStore.json";
-import { ARBITRUM, AVALANCHE, AVALANCHE_FUJI, NETWORK_EXECUTION_TO_CREATE_FEE_FACTOR } from "config/chains";
+import { ARBITRUM, BLAST_LOCALNET, NETWORK_EXECUTION_TO_CREATE_FEE_FACTOR } from "config/chains";
 import { getContract } from "config/contracts";
 import {
   SUBACCOUNT_ORDER_ACTION,
@@ -76,8 +76,7 @@ const context = createContext<SubaccountContext | null>(null);
 function getFactorByChainId(chainId: number) {
   switch (chainId) {
     case ARBITRUM:
-    case AVALANCHE_FUJI:
-    case AVALANCHE:
+    case BLAST_LOCALNET:
       return NETWORK_EXECUTION_TO_CREATE_FEE_FACTOR[chainId];
 
     default:
