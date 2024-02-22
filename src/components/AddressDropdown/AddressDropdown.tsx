@@ -27,7 +27,7 @@ function AddressDropdown({ account, accountUrl, disconnectAccountAndCloseSetting
   const useBreakpoint = createBreakpoint({ L: 600, M: 550, S: 400 });
   const breakpoint = useBreakpoint();
   const [, copyToClipboard] = useCopyToClipboard();
-  const { ensName } = useENS(account);
+  // const { ensName } = useENS(account);
   const { provider: ethereumProvider } = useJsonRpcProvider(ETH_MAINNET);
   const displayAddressLength = breakpoint === "S" ? 9 : 13;
   const [, setOneClickModalOpen] = useSubaccountModalOpen();
@@ -42,7 +42,7 @@ function AddressDropdown({ account, accountUrl, disconnectAccountAndCloseSetting
           <div className="user-avatar">
             {ethereumProvider && <Davatar size={20} address={account} provider={ethereumProvider} />}
           </div>
-          <span className="user-address">{shortenAddressOrEns(ensName || account, displayAddressLength)}</span>
+          <span className="user-address">{shortenAddressOrEns(account, displayAddressLength)}</span>
           <FaChevronDown />
         </button>
       </Menu.Button>
