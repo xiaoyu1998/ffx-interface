@@ -14,6 +14,9 @@ export type NetworkMetadata = {
 };
 
 export async function switchNetwork(chainId, active) {
+
+  console.log(chainId, active);
+  
   if (active) {
     await switchNetworkWagmi({ chainId });
   } else {

@@ -241,6 +241,14 @@ export const TOKENS: { [chainId: number]: Token[] } = {
 
 [BLAST_LOCALNET]: [
     {
+      name: "FFX Market tokens",
+      symbol: "FLP",
+      address: "<market-token-address>",
+      decimals: 18,
+      imageUrl: "https://raw.githubusercontent.com/gmx-io/gmx-assets/main/GMX-Assets/PNG/GM_LOGO.png",
+      isPlatformToken: true,
+    },
+    {
       name: "Blast",
       symbol: "BLAST",
       decimals: 18,
@@ -282,7 +290,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
     },
     {
       name: "Bitcoin (WBTC)",
-      symbol: "WBTC",
+      symbol: "BTC",
       decimals: 8,
       address: "0x0D914eBdC0D794da71EbE8Dc2e80Ab50F486ab5A",
       imageUrl: "https://assets.coingecko.com/coins/images/7598/thumb/wrapped_bitcoin_wbtc.png?1548822744",
@@ -291,7 +299,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
     },
     {
       name: "Wrapped Ethereum",
-      symbol: "WETH",
+      symbol: "ETH",
       decimals: 18,
       isWrapped: true,
       baseSymbol: "ETH",

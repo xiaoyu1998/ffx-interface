@@ -74,7 +74,7 @@ export function GmList({
           {!hideTitle && (
             <>
               <div className="App-card-title">
-                <Trans>GM Pools</Trans>
+                <Trans>FLP Pools</Trans>
                 <img src={currentIcons.network} width="16" alt="Network Icon" />
               </div>
               <div className="App-card-divider"></div>
@@ -100,7 +100,7 @@ export function GmList({
                     position="right-bottom"
                     renderContent={() => (
                       <p className="text-white">
-                        <Trans>Available amount to deposit into the specific GM pool.</Trans>
+                        <Trans>Available amount to deposit into the specific FLP pool.</Trans>
                       </p>
                     )}
                   />
@@ -197,7 +197,7 @@ export function GmList({
                       </td>
 
                       <td className="GmList-last-column">
-                        {formatTokenAmount(totalSupply, token.decimals, "GM", {
+                        {formatTokenAmount(totalSupply, token.decimals, "FLP", {
                           useCommas: true,
                           displayDecimals: 2,
                         })}
@@ -260,7 +260,7 @@ export function GmList({
 
       {isMobile && (
         <>
-          {!hideTitle && <PageTitle title={t`GM Pools`} />}
+          {!hideTitle && <PageTitle title={t`FLP Pools`} />}
 
           <div className="token-grid">
             {sortedMarketsByIndexToken.map((token, index) => {
@@ -324,7 +324,7 @@ export function GmList({
                       </div>
                       <div>
                         {" "}
-                        {formatTokenAmount(totalSupply, token.decimals, "GM", {
+                        {formatTokenAmount(totalSupply, token.decimals, "FLP", {
                           useCommas: true,
                           displayDecimals: 2,
                         })}{" "}
@@ -339,7 +339,7 @@ export function GmList({
                           position="left-bottom"
                           renderContent={() => (
                             <p className="text-white">
-                              <Trans>Available amount to deposit into the specific GM pool.</Trans>
+                              <Trans>Available amount to deposit into the specific FLP pool.</Trans>
                             </p>
                           )}
                         />
@@ -444,7 +444,7 @@ function MintableAmount({ mintableInfo, market, token, longToken, shortToken }) 
     <Tooltip
       handle={
         <>
-          {formatTokenAmount(mintableInfo?.mintableAmount, token.decimals, "GM", {
+          {formatTokenAmount(mintableInfo?.mintableAmount, token.decimals, "FLP", {
             useCommas: true,
             displayDecimals: 0,
           })}
@@ -461,7 +461,7 @@ function MintableAmount({ mintableInfo, market, token, longToken, shortToken }) 
         <>
           <p className="text-white">
             <Trans>
-              {longToken.symbol} and {shortToken.symbol} can be used to buy GM tokens for this market up to the
+              {longToken.symbol} and {shortToken.symbol} can be used to buy FLP tokens for this market up to the
               specified buying caps.
             </Trans>
           </p>

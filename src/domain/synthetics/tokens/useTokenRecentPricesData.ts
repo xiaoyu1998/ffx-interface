@@ -1,4 +1,4 @@
-import { getToken, getWrappedToken, NATIVE_TOKEN_ADDRESS } from "config/tokens";
+import { getToken, getTokenBySymbol, getWrappedToken, NATIVE_TOKEN_ADDRESS } from "config/tokens";
 import { BigNumber } from "ethers";
 import useSWR from "swr";
 import { TokenPricesData } from "./types";
@@ -18,11 +18,15 @@ export function useTokenRecentPrices(chainId: number): TokenPricesDataResult {
       oracleKeeperFetcher.fetchTickers().then((priceItems) => {
         const result: TokenPricesData = {};
 
+        //console.log(priceItems)
         priceItems.forEach((priceItem) => {
           let tokenConfig: any;
 
           try {
-            tokenConfig = getToken(chainId, priceItem.tokenAddress);
+            // tokenConfig = getToken(chainId, priceItem.tokenAddress);
+            // for pricefeed
+
+            tokenConfig = getTokenBySymbol(chainId, priceItem.tokenSymbol);
           } catch (e) {
             // ignore unknown token errors
 

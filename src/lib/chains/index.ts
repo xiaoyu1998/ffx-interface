@@ -20,5 +20,7 @@ export function useChainId() {
     chainId = DEFAULT_CHAIN_ID;
   }
 
+  //console.log(chainId);
+
   return { chainId };
 }

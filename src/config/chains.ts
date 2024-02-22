@@ -20,7 +20,7 @@ export const FEES_HIGH_BPS = 50;
 export const BLAST_LOCALNET = 100;
 
 // TODO take it from web3
-export const DEFAULT_CHAIN_ID = ARBITRUM;
+export const DEFAULT_CHAIN_ID = BLAST_LOCALNET;
 export const CHAIN_ID = DEFAULT_CHAIN_ID;
 
 export const SUPPORTED_CHAIN_IDS = [ARBITRUM, BLAST_LOCALNET];

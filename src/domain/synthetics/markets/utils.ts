@@ -464,9 +464,15 @@ export function marketTokenAmountToUsd(marketInfo: MarketInfo, marketToken: Toke
 }
 
 export function getContractMarketPrices(tokensData: TokensData, market: Market): ContractMarketPrices | undefined {
+  //console.log(tokensData)
+  //console.log(market)
+
   const indexToken = getByKey(tokensData, market.indexTokenAddress);
   const longToken = getByKey(tokensData, market.longTokenAddress);
   const shortToken = getByKey(tokensData, market.shortTokenAddress);
+
+  //console.log(market)
+  //console.log(indexToken, longToken, shortToken)
 
   if (!indexToken || !longToken || !shortToken) {
     return undefined;

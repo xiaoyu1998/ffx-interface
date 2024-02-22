@@ -38,8 +38,27 @@ const walletTheme = merge(darkTheme(), {
   },
 } as Theme);
 
+const blast_localnet = {
+  id: 100,
+  name: "blast localnet",
+  network: "blast localnet",
+  nativeCurrency: {
+    decimals: 18,
+    name: "blast",
+    symbol: "blast"
+  },
+  rpcUrls: {
+    public: { http: ["http://192.168.2.106:8545"] },
+    default: { http: ["http://192.168.2.106:8545"] }
+  },
+  blockExplorers: {
+    default: { name: "BrnkScan", url: "https://brnkscan.bearnetwork.net" }
+  }
+};
+
+
 const { chains, provider } = configureChains(
-  [arbitrum, avalanche, ...(isDevelopment() ? [arbitrumGoerli, avalancheFuji] : [])],
+  [arbitrum, blast_localnet, ...(isDevelopment() ? [arbitrumGoerli, avalancheFuji] : [])],
   [publicProvider()]
 );
 
