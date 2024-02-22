@@ -1,6 +1,6 @@
 import { t } from "@lingui/macro";
 import { getChainName, getHighExecutionFee } from "config/chains";
-import { NATIVE_TOKEN_ADDRESS } from "config/tokens";
+import { NATIVE_TOKEN_ADDRESS, getNativeToken } from "config/tokens";
 import { TokensData, convertToUsd, getTokenData } from "domain/synthetics/tokens";
 import { BigNumber } from "ethers";
 import { USD_DECIMALS } from "lib/legacy";
@@ -15,7 +15,6 @@ export function getExecutionFee(
   gasPrice: BigNumber
 ): ExecutionFee | undefined {
   const nativeToken = getTokenData(tokensData, NATIVE_TOKEN_ADDRESS);
-
   if (!nativeToken) return undefined;
 
   const baseGasLimit = gasLimts.estimatedFeeBaseGasLimit;
@@ -23,8 +22,13 @@ export function getExecutionFee(
   const adjustedGasLimit = baseGasLimit.add(applyFactor(estimatedGasLimit, multiplierFactor));
 
   const feeTokenAmount = adjustedGasLimit.mul(gasPrice);
-
   const feeUsd = convertToUsd(feeTokenAmount, nativeToken.decimals, nativeToken.prices.minPrice)!;
+
+  // console.log("nativeToken", nativeToken)
+  // console.log("gasPrice", gasPrice.toString())
+  // console.log("adjustedGasLimit", adjustedGasLimit.toString())
+  // console.log("feeTokenAmount", feeTokenAmount.toString())
+  // console.log("feeUsd", feeTokenAmount.toString()) 
 
   const isFeeHigh = feeUsd.gt(expandDecimals(getHighExecutionFee(chainId), USD_DECIMALS));
 

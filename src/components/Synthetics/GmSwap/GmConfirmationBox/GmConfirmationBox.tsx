@@ -230,6 +230,8 @@ export function GmConfirmationBox({
   );
 
   function onCreateDeposit() {
+    //console.log(account, executionFee, marketToken, market, marketTokenAmount, tokensData, signer)
+    
     if (!account || !executionFee || !marketToken || !market || !marketTokenAmount || !tokensData || !signer) {
       return Promise.resolve();
     }

@@ -59,17 +59,11 @@ export function MarketPoolsPage(p: Props) {
   );
 
   return (
-    <SEO title={getPageTitle("V2 Pools")}>
+    <SEO title={getPageTitle("FLP Pools")}>
       <div className="default-container page-layout">
         <PageTitle
-          title="V2 Pools"
+          title="FLP Pools"
           isTop
-          subtitle={
-            <Trans>
-              Purchase <ExternalLink href="https://docs.gmx.io/docs/providing-liquidity/v2">GM Tokens</ExternalLink> to
-              earn fees from swaps and leverage trading.
-            </Trans>
-          }
         />
 
         <div className="MarketPoolsPage-content">

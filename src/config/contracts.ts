@@ -71,7 +71,7 @@ const CONTRACTS = {
     RewardRouter: AddressZero,
     RewardReader: AddressZero,
     GlpRewardRouter: AddressZero,
-    NATIVE_TOKEN: "0x78E18AF8b8dBdc061dc8A1690888B33ee447a8c9",
+    NATIVE_TOKEN: AddressZero,
     GLP: AddressZero,
     GMX: AddressZero,
     ES_GMX: AddressZero,
@@ -99,22 +99,22 @@ const CONTRACTS = {
     PositionManager: AddressZero,
 
     TraderJoeGmxAvaxPool: AddressZero,
-    ReferralStorage: "0x90DCC2E5699bc87F18374b354e4E0E31ee3B9b00",
+    ReferralStorage: "0xBfd92e2d4fDbDCAda1a6f44E4e4e435359cDD075",
     ReferralReader: AddressZero,
 
     // Synthetics
-    DataStore: "0xB2Dc5b2929251f974346Ea39FD93EfE00B6C0Ff7",
-    EventEmitter: "0xE7d5B3f04a8e2538bc64fBFCb029f8B2269575e3",
-    ExchangeRouter: "0x8446480aFe3081f024E7213bac19d93Ba13dcBf2",
-    SubaccountRouter: "0xb6B484A8ef3CFb880Ff8F8A2E54882A7c3335b9c",
-    DepositVault: "0x54147b7b43943AB0a6cF1b01BaAD7438AE68306C",
-    WithdrawalVault: "0xFE1FDe7438217fd5bc1880303711aFE13C6C7d31",
-    OrderVault: "0xEe918D82085ed9a617909BC6b83c48EAFC949Aa4",
-    SyntheticsReader: "0xB3C1B5996C47A34e8eE55Cb6d3624dCCe45Bfa5c",
-    SyntheticsRouter: "0x40897a8DB176577Fa06A4bdb4a0D7ebB86662E89",
+    DataStore: "0xC96d34deF5CDf1812aF1083f05e9a32B1C863529",
+    EventEmitter: "0xDeb1Aeab5F682d6D3793F62a801e99b79CE359Df",
+    ExchangeRouter: "0x9A8711198D0E55B1A3fE17c79f6a2aDE24F6cb1d",
+    SubaccountRouter: "0xcE90B5BDdB97673D753FeBb69B9d5C8747fa1a92",
+    DepositVault: "0xD5E5d8f9Bc72ae6D8c36D8Db9D13882C110C3DeC",
+    WithdrawalVault: "0x5904F5346114E9CB5ea5bd94094BE781160f4731",
+    OrderVault: "0x7f82Aca0A8e47A59bc4B3D8Ea064C72EB828938c",
+    SyntheticsReader: "0xBC47e7d8Dd1A1Ee73454E8283a1CBF42169d70D4",
+    SyntheticsRouter: "0xb1C09e46fF94537dB8753328A862f9d733B97193",
     Timelock: AddressZero,
 
-    Multicall: "0x3e72b29b05a72117BB2fd3d9d1816514CfD4078e",
+    Multicall: "0x6cfF0F927A5b5e4f7CBC9Fe3273488fe41062770",
   },
 };
 

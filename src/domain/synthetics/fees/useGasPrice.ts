@@ -27,7 +27,7 @@ export function useGasPrice(chainId: number) {
 
           try {
             let gasPrice = await provider.getGasPrice();
-
+            //console.log("gasPrice", gasPrice.toString())
             if (executionFeeConfig.shouldUseMaxPriorityFeePerGas) {
               const feeData = await provider.getFeeData();
 

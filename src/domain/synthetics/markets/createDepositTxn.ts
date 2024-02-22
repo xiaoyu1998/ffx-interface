@@ -49,6 +49,10 @@ export async function createDepositTxn(chainId: number, signer: Signer, p: Param
 
   const wntAmount = p.executionFee.add(wntDeposit);
 
+  console.log("wntAmount", wntAmount.toString())
+  console.log("ExchangeRouter", contract)
+  console.log("depositVaultAddress", depositVaultAddress)
+
   const initialLongTokenAddress = convertTokenAddress(chainId, p.initialLongTokenAddress, "wrapped");
   const initialShortTokenAddress = convertTokenAddress(chainId, p.initialShortTokenAddress, "wrapped");
 

@@ -25,11 +25,10 @@ export function useTokenRecentPrices(chainId: number): TokenPricesDataResult {
           try {
             // tokenConfig = getToken(chainId, priceItem.tokenAddress);
             // for pricefeed
-
             tokenConfig = getTokenBySymbol(chainId, priceItem.tokenSymbol);
+            //console.log(priceItem.tokenSymbol,  tokenConfig);
           } catch (e) {
             // ignore unknown token errors
-
             return;
           }
 
@@ -44,7 +43,6 @@ export function useTokenRecentPrices(chainId: number): TokenPricesDataResult {
         if (result[wrappedToken.address] && !result[NATIVE_TOKEN_ADDRESS]) {
           result[NATIVE_TOKEN_ADDRESS] = result[wrappedToken.address];
         }
-
         return {
           pricesData: result,
           updatedAt: Date.now(),
