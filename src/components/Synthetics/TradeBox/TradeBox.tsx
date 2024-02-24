@@ -254,6 +254,8 @@ export function TradeBox(p: Props) {
         swapsCount: swapAmounts.swapPathStats.swapPath.length,
       });
 
+      console.log("estimatedGas", estimatedGas.toString());
+
       return {
         fees: getTradeFees({
           isIncrease: false,

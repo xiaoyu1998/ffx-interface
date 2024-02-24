@@ -21,15 +21,13 @@ export function getExecutionFee(
   const multiplierFactor = gasLimts.estimatedFeeMultiplierFactor;
   const adjustedGasLimit = baseGasLimit.add(applyFactor(estimatedGasLimit, multiplierFactor));
 
+  //console.log("estimatedFeeBaseGasLimit",gasLimts.estimatedFeeBaseGasLimit.toString());
+  //console.log("estimatedGasLimit", estimatedGasLimit.toString());
+  //console.log("adjustedGasLimit",adjustedGasLimit.toString());
+  //console.log("gasPrice",gasPrice.toString());
+
   const feeTokenAmount = adjustedGasLimit.mul(gasPrice);
   const feeUsd = convertToUsd(feeTokenAmount, nativeToken.decimals, nativeToken.prices.minPrice)!;
-
-  // console.log("nativeToken", nativeToken)
-  // console.log("gasPrice", gasPrice.toString())
-  // console.log("adjustedGasLimit", adjustedGasLimit.toString())
-  // console.log("feeTokenAmount", feeTokenAmount.toString())
-  // console.log("feeUsd", feeTokenAmount.toString()) 
-
   const isFeeHigh = feeUsd.gt(expandDecimals(getHighExecutionFee(chainId), USD_DECIMALS));
 
   const warning = isFeeHigh
@@ -63,6 +61,10 @@ export function estimateExecuteDepositGasLimit(
   const isMultiTokenDeposit = deposit.initialLongTokenAmount?.gt(0) && deposit.initialShortTokenAmount?.gt(0);
 
   const depositGasLimit = isMultiTokenDeposit ? gasLimits.depositMultiToken : gasLimits.depositSingleToken;
+
+  //console.log("depositGasLimit", depositGasLimit.toString());
+  //console.log("gasForSwaps", gasForSwaps.toString());
+  //console.log("deposit.callbackGasLimit", deposit.callbackGasLimit?.toString());
 
   return depositGasLimit.add(gasForSwaps).add(deposit.callbackGasLimit || 0);
 }

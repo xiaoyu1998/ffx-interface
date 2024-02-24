@@ -82,7 +82,7 @@ export const EXECUTION_FEE_CONFIG_V2: {
   },
   [BLAST_LOCALNET]: {
     shouldUseMaxPriorityFeePerGas: false,
-    defaultBufferBps: 1000, // 10%
+    defaultBufferBps: 6000, // 10%
   },
 };
 

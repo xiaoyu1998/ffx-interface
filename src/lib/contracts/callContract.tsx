@@ -46,8 +46,6 @@ export async function callContract(
 
     const res = await contract[method](...params, txnOpts);
 
-    console.log(res);
-
     if (!opts.hideSentMsg) {
       const txUrl = getExplorerUrl(chainId) + "tx/" + res.hash;
       const sentMsg = opts.sentMsg || t`Transaction sent.`;

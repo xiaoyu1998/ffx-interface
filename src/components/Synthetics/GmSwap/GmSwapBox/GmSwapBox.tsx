@@ -409,6 +409,8 @@ export function GmSwapBox(p: Props) {
       : estimateExecuteWithdrawalGasLimit(gasLimits, {});
 
     const executionFee = getExecutionFee(chainId, gasLimits, tokensData, gasLimit, gasPrice);
+    // console.log("gasLimit", gasLimit.toString());
+    // console.log("executionFee", executionFee?.feeTokenAmount.toString());
 
     return {
       fees,

@@ -27,7 +27,7 @@ export function useGasPrice(chainId: number) {
 
           try {
             let gasPrice = await provider.getGasPrice();
-            //console.log("gasPrice", gasPrice.toString())
+            // console.log("gasPrice", gasPrice.toString())
             if (executionFeeConfig.shouldUseMaxPriorityFeePerGas) {
               const feeData = await provider.getFeeData();
 
@@ -42,7 +42,10 @@ export function useGasPrice(chainId: number) {
               const buffer = gasPrice.mul(settings.executionFeeBufferBps).div(BASIS_POINTS_DIVISOR);
               gasPrice = gasPrice.add(buffer);
             }
+
+            // console.log("gasPrice2", gasPrice.toString())
             const premium = GAS_PRICE_ADJUSTMENT_MAP[chainId] || bigNumberify(0);
+            // console.log("gasPrice3", gasPrice.toString())
 
             resolve(gasPrice.add(premium));
           } catch (e) {
