@@ -187,7 +187,7 @@ export function MarketStats(p: Props) {
           value={formatTokenAmountWithUsd(
             marketBalance || BigNumber.from(0),
             marketBalanceUsd || BigNumber.from(0),
-            "GM",
+            "FLP",
             marketToken?.decimals ?? 18
           )}
         />
@@ -198,7 +198,7 @@ export function MarketStats(p: Props) {
           label={t`Total Supply`}
           value={
             marketTotalSupply && marketTotalSupplyUsd
-              ? formatTokenAmountWithUsd(marketTotalSupply, marketTotalSupplyUsd, "GM", marketToken?.decimals, {
+              ? formatTokenAmountWithUsd(marketTotalSupply, marketTotalSupplyUsd, "FLP", marketToken?.decimals, {
                   displayDecimals: 0,
                 })
               : "..."
@@ -213,7 +213,7 @@ export function MarketStats(p: Props) {
                 handle={formatTokenAmountWithUsd(
                   mintableInfo.mintableAmount,
                   mintableInfo.mintableUsd,
-                  "GM",
+                  "FLP",
                   marketToken?.decimals,
                   {
                     displayDecimals: 0,
@@ -225,7 +225,7 @@ export function MarketStats(p: Props) {
                     <div>
                       {marketInfo?.isSameCollaterals ? (
                         <Trans>
-                          {marketInfo?.longToken.symbol} can be used to buy GM for this market up to the specified
+                          {marketInfo?.longToken.symbol} can be used to buy FLP for this market up to the specified
                           buying caps.
                         </Trans>
                       ) : (
@@ -270,7 +270,7 @@ export function MarketStats(p: Props) {
               handle={formatTokenAmountWithUsd(
                 sellableInfo?.totalAmount,
                 sellableInfo?.totalUsd,
-                "GM",
+                "FLP",
                 marketToken?.decimals,
                 {
                   displayDecimals: 0,
@@ -280,7 +280,7 @@ export function MarketStats(p: Props) {
               renderContent={() => (
                 <div>
                   <Trans>
-                    GM can be sold for {longToken?.symbol} and {shortToken?.symbol} for this market up to the specified
+                    FLP can be sold for {longToken?.symbol} and {shortToken?.symbol} for this market up to the specified
                     selling caps. The remaining tokens in the pool are reserved for currently open Positions.
                   </Trans>
                   <br />

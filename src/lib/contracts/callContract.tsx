@@ -76,7 +76,6 @@ export async function callContract(
     return res;
   } catch (e) {
     const { failMsg, autoCloseToast } = getErrorMessage(chainId, e, opts?.failMsg);
-
     helperToast.error(failMsg, { autoClose: autoCloseToast });
     throw e;
   }

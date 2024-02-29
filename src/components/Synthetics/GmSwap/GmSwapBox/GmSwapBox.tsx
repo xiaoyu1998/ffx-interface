@@ -83,8 +83,8 @@ type Props = {
 };
 
 const OPERATION_LABELS = {
-  [Operation.Deposit]: t`Buy GM`,
-  [Operation.Withdrawal]: t`Sell GM`,
+  [Operation.Deposit]: t`Buy FLP`,
+  [Operation.Withdrawal]: t`Sell FLP`,
 };
 
 const MODE_LABELS = {
@@ -470,7 +470,7 @@ export function GmSwapBox(p: Props) {
     }
 
     return {
-      text: isDeposit ? t`Buy GM` : t`Sell GM`,
+      text: isDeposit ? t`Buy FLP` : t`Sell FLP`,
       onSubmit,
     };
   }, [

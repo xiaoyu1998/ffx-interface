@@ -7,7 +7,8 @@ import SEO from "components/Common/SEO";
 import { getPageTitle } from "lib/legacy";
 import PageTitle from "components/PageTitle/PageTitle";
 
-export default function BuyFFX() {
+export default function Buy() {
+  //console.log("xiaoyu")
   return (
     <SEO title={getPageTitle(t`Buy FFX`)}>
       <div className="BuyFFX page-layout">

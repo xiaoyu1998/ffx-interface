@@ -190,6 +190,8 @@ export function SyntheticsEventsProvider({
     },
 
     DepositCreated: (eventData: EventLogData, txnParams: EventTxnParams) => {
+      console.log(eventData, txnParams);
+
       const depositData: DepositCreatedEventData = {
         account: eventData.addressItems.items.account,
         receiver: eventData.addressItems.items.receiver,
@@ -224,6 +226,8 @@ export function SyntheticsEventsProvider({
     },
 
     DepositExecuted: (eventData: EventLogData, txnParams: EventTxnParams) => {
+      console.log(eventData, txnParams);
+
       const key = eventData.bytes32Items.items.key;
       if (depositStatuses[key]) {
         setDepositStatuses((old) => updateByKey(old, key, { executedTxnHash: txnParams.transactionHash }));
@@ -418,6 +422,8 @@ export function SyntheticsEventsProvider({
 
   useEffect(
     function subscribe() {
+      console.log(hasLostFocus, wsProvider, currentAccount);
+      
       if (hasLostFocus || !wsProvider || !currentAccount) {
         return;
       }
@@ -452,6 +458,7 @@ export function SyntheticsEventsProvider({
 
         try {
           const parsed = eventEmitter.interface.parseLog(e);
+          console.log(parsed);
 
           if (parsed.name === "EventLog") {
             handleEventLog(parsed.args[0], parsed.args[1], parsed.args[2], parsed.args[3], txnOpts);

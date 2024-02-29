@@ -1,9 +1,7 @@
 import { JsonRpcProvider, WebSocketProvider } from "@ethersproject/providers";
 import {
   ARBITRUM,
-  ARBITRUM_GOERLI,
-  AVALANCHE,
-  AVALANCHE_FUJI,
+  BLAST_LOCALNET,
   FALLBACK_PROVIDERS,
   getAlchemyWsUrl,
   getFallbackRpcUrl,
@@ -36,19 +34,19 @@ export function getWsProvider(chainId: number): WebSocketProvider | JsonRpcProvi
     return new ethers.providers.WebSocketProvider(getAlchemyWsUrl());
   }
 
-  if (chainId === AVALANCHE) {
-    return new ethers.providers.WebSocketProvider("wss://api.avax.network/ext/bc/C/ws");
+  if (chainId === BLAST_LOCALNET) {
+    return new ethers.providers.WebSocketProvider("ws://192.168.2.106:8546");
   }
 
-  if (chainId === ARBITRUM_GOERLI) {
-    return new ethers.providers.WebSocketProvider("wss://arb-goerli.g.alchemy.com/v2/cZfd99JyN42V9Clbs_gOvA3GSBZH1-1j");
-  }
+  // if (chainId === ARBITRUM_GOERLI) {
+  //   return new ethers.providers.WebSocketProvider("wss://arb-goerli.g.alchemy.com/v2/cZfd99JyN42V9Clbs_gOvA3GSBZH1-1j");
+  // }
 
-  if (chainId === AVALANCHE_FUJI) {
-    const provider = new ethers.providers.JsonRpcProvider(getRpcUrl(AVALANCHE_FUJI));
-    provider.pollingInterval = 2000;
-    return provider;
-  }
+  // if (chainId === AVALANCHE_FUJI) {
+  //   const provider = new ethers.providers.JsonRpcProvider(getRpcUrl(AVALANCHE_FUJI));
+  //   provider.pollingInterval = 2000;
+  //   return provider;
+  // }
 }
 
 export function getFallbackProvider(chainId: number) {

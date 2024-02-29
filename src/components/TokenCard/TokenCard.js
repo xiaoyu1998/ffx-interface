@@ -98,7 +98,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
       <div className="Home-token-card-option">
         <div>
           <div className="Home-token-card-option-icon">
-            <img src={gmxIcon} width="40" alt="GMX Icons" /> GMX
+            <img src={gmxIcon} width="40" alt="GMX Icons" /> FFX
           </div>
           <div className="Home-token-card-option-info">
             <div className="Home-token-card-option-title">

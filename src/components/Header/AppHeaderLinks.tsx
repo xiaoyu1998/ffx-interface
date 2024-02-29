@@ -7,7 +7,7 @@ import { HeaderLink } from "./HeaderLink";
 import "./Header.css";
 import { isHomeSite } from "lib/legacy";
 import ExternalLink from "components/ExternalLink/ExternalLink";
-import logoImg from "img/logo_GMX.svg";
+import logoImg from "img/logo_ffx.svg";
 
 type Props = {
   small?: boolean;
@@ -42,11 +42,6 @@ export function AppHeaderLinks({
       <div className="App-header-link-container">
         <HeaderLink to="/earn" redirectPopupTimestamp={redirectPopupTimestamp} showRedirectModal={showRedirectModal}>
           <Trans>Earn</Trans>
-        </HeaderLink>
-      </div>
-      <div className="App-header-link-container">
-        <HeaderLink to="/buy" redirectPopupTimestamp={redirectPopupTimestamp} showRedirectModal={showRedirectModal}>
-          <Trans>Buy</Trans>
         </HeaderLink>
       </div>
       <div className="App-header-link-container">

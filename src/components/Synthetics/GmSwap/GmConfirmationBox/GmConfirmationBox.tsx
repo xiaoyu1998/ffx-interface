@@ -187,7 +187,7 @@ export function GmConfirmationBox({
 
     if (isSubmitting) {
       return {
-        text: isDeposit ? t`Buying GM...` : t`Selling GM...`,
+        text: isDeposit ? t`Buying FLP...` : t`Selling FLP...`,
         disabled: true,
       };
     }
@@ -195,7 +195,7 @@ export function GmConfirmationBox({
     if (tokensToApprove.length > 0 && marketToken) {
       const symbols = tokensToApprove.map((address) => {
         const token = getTokenData(tokensData, address)!;
-        return address === marketToken.address ? "GM" : token?.assetSymbol ?? token?.symbol;
+        return address === marketToken.address ? "FLP" : token?.assetSymbol ?? token?.symbol;
       });
 
       const symbolsText = symbols.join(", ");
@@ -401,7 +401,7 @@ export function GmConfirmationBox({
                       <ApproveTokenButton
                         key={address}
                         tokenAddress={address}
-                        tokenSymbol={address === marketToken?.address ? "GM" : token.assetSymbol ?? token.symbol}
+                        tokenSymbol={address === marketToken?.address ? "FLP" : token.assetSymbol ?? token.symbol}
                         spenderAddress={routerAddress}
                       />
                     </div>

@@ -1,5 +1,5 @@
 import { FiX } from "react-icons/fi";
-import logoImg from "img/logo_GMX.svg";
+import logoImg from "img/logo_ffx.svg";
 import { t } from "@lingui/macro";
 
 import "./Header.css";
@@ -45,7 +45,7 @@ export function HomeHeaderLinks({ small, clickCloseIcon, redirectPopupTimestamp,
       {small && (
         <div className="App-header-links-header">
           <Link className="App-header-link-main" to="/">
-            <img src={logoImg} alt="GMX Logo" />
+            <img src={logoImg} alt="FFX Logo" />
           </Link>
           <div
             className="App-header-menu-icon-block mobile-cross-menu"

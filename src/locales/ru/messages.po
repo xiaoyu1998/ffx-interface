@@ -91,8 +91,8 @@ msgid "<0>The price that orders can be executed at may differ slightly from the 
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "<0>This will withdraw and unreserve all tokens as well as pause vesting.<1/><2/>esGMX tokens that have been converted to GMX will remain as GMX tokens.<3/><4/>To claim GMX tokens without withdrawing, use the \"Claim\" button under the Total Rewards section.<5/><6/></0>"
-msgstr "<0>Это приведет к выводу и снятию с резерва всех токенов, а также приостановит вестниг.<1/><2/>токены esGMX, которые были конвертированы в GMX, останутся токенами GMX.<3/><4/>Чтобы получить токены GMX без вывода средств, используйте кнопку \"Заявка\" под разделом Общие Вознаграждения.<5/><6/></0>\""
+#~ msgid "<0>This will withdraw and unreserve all tokens as well as pause vesting.<1/><2/>esGMX tokens that have been converted to GMX will remain as GMX tokens.<3/><4/>To claim GMX tokens without withdrawing, use the \"Claim\" button under the Total Rewards section.<5/><6/></0>"
+#~ msgstr "<0>Это приведет к выводу и снятию с резерва всех токенов, а также приостановит вестниг.<1/><2/>токены esGMX, которые были конвертированы в GMX, останутся токенами GMX.<3/><4/>Чтобы получить токены GMX без вывода средств, используйте кнопку \"Заявка\" под разделом Общие Вознаграждения.<5/><6/></0>\""
 
 #: src/pages/Dashboard/DashboardV2.js
 msgid "<0>Total value of tokens in GLP pool ({chainName}).</0><1>This value may be higher on other websites due to the collateral of positions being included in the calculation.</1>"
@@ -151,9 +151,6 @@ msgstr "Снимок долларовой стоимости вашего зал
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "APR"
 msgstr "Годовая Процентная Ставка"
 
@@ -162,8 +159,8 @@ msgid "APRs are updated weekly on Wednesday and will depend on the fees collecte
 msgstr "Годовая Процентная Ставка обновляется еженедельно в среду и зависит от сборов, собранных за неделю."
 
 #: src/pages/Stake/StakeV2.js
-msgid "APRs are updated weekly on Wednesday and will depend on the fees collected for the week. <0/><1/>Historical GLP APRs can be checked in this <2>community dashboard</2>."
-msgstr ""
+#~ msgid "APRs are updated weekly on Wednesday and will depend on the fees collected for the week. <0/><1/>Historical GLP APRs can be checked in this <2>community dashboard</2>."
+#~ msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
 msgid "AUM"
@@ -316,8 +313,8 @@ msgid "Adding..."
 msgstr "Добавление..."
 
 #: src/pages/Stake/StakeV2.js
-msgid "Additional reserve required"
-msgstr "Требуется дополнительный резерв"
+#~ msgid "Additional reserve required"
+#~ msgstr "Требуется дополнительный резерв"
 
 #: src/components/Exchange/OrdersToa.js
 msgid "Additionally, trigger orders are market orders and are not guaranteed to settle at the trigger price."
@@ -420,7 +417,6 @@ msgid "Approval was cancelled"
 msgstr "Одобрение было отменено"
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-#: src/pages/Stake/StakeV2.js
 msgid "Approve GMX"
 msgstr "Одобрить GMX"
 
@@ -432,13 +428,12 @@ msgid "Approve {0}"
 msgstr "Одобрить {0}"
 
 #: src/pages/Stake/StakeV1.js
-#: src/pages/Stake/StakeV2.js
 msgid "Approve {stakingTokenSymbol}"
 msgstr "Одобрить {stakingTokenSymbol}"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Approving GMX..."
-msgstr "Одобрение GMX..."
+#~ msgid "Approving GMX..."
+#~ msgstr "Одобрение GMX..."
 
 #: src/components/Exchange/PositionEditor.js
 #: src/components/Exchange/SwapBox.js
@@ -447,7 +442,6 @@ msgid "Approving {0}..."
 msgstr "Одобрение {0}..."
 
 #: src/pages/Stake/StakeV1.js
-#: src/pages/Stake/StakeV2.js
 msgid "Approving {stakingTokenSymbol}..."
 msgstr "Одобрение {stakingTokenSymbol}..."
 
@@ -458,8 +452,8 @@ msgstr "Одобрение..."
 
 #: src/components/TokenCard/TokenCard.js
 #: src/components/TokenCard/TokenCard.js
-msgid "Arbitrum APR:"
-msgstr "Arbitrum APR:"
+#~ msgid "Arbitrum APR:"
+#~ msgstr "Arbitrum APR:"
 
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
 msgid "As there is not enough liquidity in GLP to swap {0} to {swapTokenSymbol}, you can use the option below to do so:"
@@ -492,8 +486,13 @@ msgstr "Доступная сумма для пополнения GLP."
 
 #: src/components/Synthetics/GmList/GmList.tsx
 #: src/components/Synthetics/GmList/GmList.tsx
-msgid "Available amount to deposit into the specific GM pool."
+msgid "Available amount to deposit into the specific FLP pool."
 msgstr ""
+
+#: src/components/Synthetics/GmList/GmList.tsx
+#: src/components/Synthetics/GmList/GmList.tsx
+#~ msgid "Available amount to deposit into the specific GM pool."
+#~ msgstr ""
 
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
@@ -506,8 +505,8 @@ msgstr "Доступно в предпочитаемой сети"
 
 #: src/components/TokenCard/TokenCard.js
 #: src/components/TokenCard/TokenCard.js
-msgid "Avalanche APR:"
-msgstr "Avalanche APR:"
+#~ msgid "Avalanche APR:"
+#~ msgstr "Avalanche APR:"
 
 #: src/components/Synthetics/GmList/GmList.tsx
 msgid "BUYABLE"
@@ -534,6 +533,10 @@ msgstr ""
 msgid "Begin Transfer"
 msgstr "Начать перевод"
 
+#: src/components/TokenCard/TokenCard.js
+msgid "Blast APR:"
+msgstr ""
+
 #: src/components/AprInfo/AprInfo.tsx
 msgid "Bonus APR"
 msgstr ""
@@ -544,12 +547,12 @@ msgid "Bonus Tokens"
 msgstr "Бонусные токены"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Boost Percentage"
-msgstr "Процент повышения"
+#~ msgid "Boost Percentage"
+#~ msgstr "Процент повышения"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Boost your rewards with Multiplier Points. <0>More info</0>."
-msgstr "Повышайте свои вознаграждения с помощью Множительных Баллов. <0>More info</0>."
+#~ msgid "Boost your rewards with Multiplier Points. <0>More info</0>."
+#~ msgstr "Повышайте свои вознаграждения с помощью Множительных Баллов. <0>More info</0>."
 
 #: src/components/Exchange/FeesTooltip.tsx
 #: src/components/Exchange/NetValueTooltip.tsx
@@ -577,7 +580,6 @@ msgstr ""
 msgid "Bridge {tokenSymbol} to {chainName} using any of the options below:"
 msgstr ""
 
-#: src/components/Header/AppHeaderLinks.tsx
 #: src/components/Synthetics/GmList/GmList.tsx
 #: src/components/Synthetics/GmList/GmList.tsx
 #: src/components/Synthetics/GmSwap/GmConfirmationBox/GmConfirmationBox.tsx
@@ -597,6 +599,15 @@ msgstr ""
 msgid "Buy ETH directly on Arbitrum or transfer it there."
 msgstr ""
 
+#: src/pages/Buy/Buy.js
+msgid "Buy FFX"
+msgstr ""
+
+#: src/components/Synthetics/GmSwap/GmSwapBox/GmSwapBox.tsx
+#: src/components/Synthetics/GmSwap/GmSwapBox/GmSwapBox.tsx
+msgid "Buy FLP"
+msgstr ""
+
 #: src/components/Synthetics/GmSwap/GmFees/GmFees.tsx
 msgid "Buy Fee"
 msgstr ""
@@ -604,26 +615,24 @@ msgstr ""
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
-#: src/pages/Stake/StakeV2.js
 msgid "Buy GLP"
 msgstr "Купить GLP"
 
 #: src/pages/Buy/Buy.js
-msgid "Buy GLP or GMX"
-msgstr ""
+#~ msgid "Buy GLP or GMX"
+#~ msgstr ""
 
 #: src/components/Synthetics/GmSwap/GmSwapBox/GmSwapBox.tsx
-#: src/components/Synthetics/GmSwap/GmSwapBox/GmSwapBox.tsx
-msgid "Buy GM"
-msgstr ""
+#~ msgid "Buy GM"
+#~ msgstr ""
 
 #: src/components/Glp/GlpSwap.js
 msgid "Buy GM tokens before the epoch resets in {0} to be eligible for the Bonus Rebate. Alternatively, wait for the epoch to reset to redeem GLP and buy GM within the same epoch."
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Buy GMX"
-msgstr "Купить GMX"
+#~ msgid "Buy GMX"
+#~ msgstr "Купить GMX"
 
 #: src/pages/BuyFFX/BuyFFX.tsx
 msgid "Buy GMX from Traderjoe:"
@@ -672,14 +681,18 @@ msgstr "Покупка не удалась."
 #: src/components/TokenCard/TokenCard.js
 #: src/components/TokenCard/TokenCard.js
 #: src/components/TokenCard/TokenCard.js
-msgid "Buy on Arbitrum"
-msgstr "Купить на Arbitrum"
+#~ msgid "Buy on Arbitrum"
+#~ msgstr "Купить на Arbitrum"
 
 #: src/components/TokenCard/TokenCard.js
 #: src/components/TokenCard/TokenCard.js
 #: src/components/TokenCard/TokenCard.js
-msgid "Buy on Avalanche"
-msgstr "Купить на Avalanche"
+#~ msgid "Buy on Avalanche"
+#~ msgstr "Купить на Avalanche"
+
+#: src/components/TokenCard/TokenCard.js
+msgid "Buy on Blast"
+msgstr ""
 
 #: src/pages/BuyFFX/BuyFFX.tsx
 msgid "Buy or Transfer AVAX to Avalanche"
@@ -724,8 +737,12 @@ msgid "Buyable"
 msgstr ""
 
 #: src/components/Synthetics/GmSwap/GmConfirmationBox/GmConfirmationBox.tsx
-msgid "Buying GM..."
+msgid "Buying FLP..."
 msgstr ""
+
+#: src/components/Synthetics/GmSwap/GmConfirmationBox/GmConfirmationBox.tsx
+#~ msgid "Buying GM..."
+#~ msgstr ""
 
 #: src/components/Glp/GlpSwap.js
 msgid "Buying..."
@@ -800,8 +817,6 @@ msgstr ""
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Claim"
 msgstr "Запрос"
 
@@ -815,23 +830,22 @@ msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Claim GMX Rewards"
-msgstr "Запрос на получение Вознаграждения GMX"
+#~ msgid "Claim GMX Rewards"
+#~ msgstr "Запрос на получение Вознаграждения GMX"
 
 #: src/components/Synthetics/ClaimHistoryRow/ClaimHistoryRow.tsx
 msgid "Claim Price Impact Rebates"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Claim Rewards"
-msgstr "Запрос на получение Вознаграждения"
+#~ msgid "Claim Rewards"
+#~ msgstr "Запрос на получение Вознаграждения"
 
 #: src/components/Referrals/AffiliatesStats.tsx
 msgid "Claim V2 Rebates from your referred Traders."
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-#: src/pages/Stake/StakeV2.js
 msgid "Claim completed!"
 msgstr "Запрос выполнен!"
 
@@ -841,15 +855,14 @@ msgstr "Запрос esGMX"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Claim esGMX Rewards"
-msgstr "Запрос на получение Вознаграждения esGMX"
+#~ msgid "Claim esGMX Rewards"
+#~ msgstr "Запрос на получение Вознаграждения esGMX"
 
 #: src/pages/Stake/StakeV1.js
 msgid "Claim failed"
 msgstr "Запрос не прошел"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-#: src/pages/Stake/StakeV2.js
 msgid "Claim failed."
 msgstr "Запрос не прошел."
 
@@ -862,8 +875,8 @@ msgid "Claim submitted! <0>View status.</0>"
 msgstr "Запрос завершен! <0>Увидеть статус.</0>"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Claim submitted."
-msgstr "Запрос завершен."
+#~ msgid "Claim submitted."
+#~ msgstr "Запрос завершен."
 
 #: src/components/Synthetics/ClaimablePositionPriceImpactRebateModal/ClaimablePositionPriceImpactRebateModal.tsx
 msgid "Claim {totalUsd}"
@@ -871,12 +884,10 @@ msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Claim {wrappedTokenSymbol} Rewards"
-msgstr "Запрос на получение {wrappedTokenSymbol} Вознаграждения"
+#~ msgid "Claim {wrappedTokenSymbol} Rewards"
+#~ msgstr "Запрос на получение {wrappedTokenSymbol} Вознаграждения"
 
 #: src/components/Synthetics/Claims/ClaimableCard.tsx
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Claimable"
 msgstr "Заявленный"
 
@@ -901,7 +912,6 @@ msgstr ""
 #: src/components/Synthetics/ClaimModal/ClaimModal.tsx
 #: src/components/Synthetics/ClaimablePositionPriceImpactRebateModal/ClaimablePositionPriceImpactRebateModal.tsx
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-#: src/pages/Stake/StakeV2.js
 msgid "Claiming..."
 msgstr "Утверждение..."
 
@@ -1046,28 +1056,28 @@ msgstr "Завершить Перевод"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Compound"
-msgstr "Компаунд"
+#~ msgid "Compound"
+#~ msgstr "Компаунд"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Compound Rewards"
-msgstr "Компаунд вознаграждения"
+#~ msgid "Compound Rewards"
+#~ msgstr "Компаунд вознаграждения"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Compound completed!"
-msgstr "Компаунд завершено!"
+#~ msgid "Compound completed!"
+#~ msgstr "Компаунд завершено!"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Compound failed."
-msgstr "Компаунд не удалось."
+#~ msgid "Compound failed."
+#~ msgstr "Компаунд не удалось."
 
 #: src/pages/Stake/StakeV2.js
-msgid "Compound submitted!"
-msgstr "Компаунд представлено!"
+#~ msgid "Compound submitted!"
+#~ msgstr "Компаунд представлено!"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Compounding..."
-msgstr "Компаунд..."
+#~ msgid "Compounding..."
+#~ msgstr "Компаунд..."
 
 #: src/components/Referrals/ClaimAffiliatesModal/ClaimAffiliatesModal.tsx
 #: src/components/Synthetics/ClaimModal/ClaimModal.tsx
@@ -1128,10 +1138,6 @@ msgstr "Подключение"
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Connect Wallet"
 msgstr "Подключить Кошелек"
 
@@ -1149,8 +1155,8 @@ msgid "Continue"
 msgstr "Продолжить"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Convert esGMX tokens to GMX tokens.<0/>Please read the <1>vesting details</1> before using the vaults."
-msgstr "Конвертируйте токены esGMX в токены GMX.<0/>Пожалуйста, ознакомьтесь с <1>деталями инвестирования</1> перед использованием хранилищ."
+#~ msgid "Convert esGMX tokens to GMX tokens.<0/>Please read the <1>vesting details</1> before using the vaults."
+#~ msgstr "Конвертируйте токены esGMX в токены GMX.<0/>Пожалуйста, ознакомьтесь с <1>деталями инвестирования</1> перед использованием хранилищ."
 
 #: src/components/Synthetics/SubaccountModal/SubaccountModal.tsx
 msgid "Convert this amount of {0} to {1} in your Main Account to allow for auto top-ups, as only {2} can be automatically transferred to your Subaccount. The {3} balance of your main account is shown above."
@@ -1158,8 +1164,8 @@ msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Convert {wrappedTokenSymbol} to {nativeTokenSymbol}"
-msgstr "Конвертировать {wrappedTokenSymbol} в {nativeTokenSymbol}"
+#~ msgid "Convert {wrappedTokenSymbol} to {nativeTokenSymbol}"
+#~ msgstr "Конвертировать {wrappedTokenSymbol} в {nativeTokenSymbol}"
 
 #: src/components/Exchange/PositionShare.tsx
 msgid "Copy"
@@ -1268,8 +1274,8 @@ msgid "Current Pool Amount"
 msgstr "Текущая Сумма Пула"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Current Reserved"
-msgstr "Текущее Резервирование"
+#~ msgid "Current Reserved"
+#~ msgstr "Текущее Резервирование"
 
 #: src/pages/Dashboard/DashboardV2.js
 msgid "Current Weight"
@@ -1298,7 +1304,6 @@ msgstr ""
 msgid "DEX Aggregator"
 msgstr "Агрегатор DEX"
 
-#: src/components/Header/AppHeaderLinks.tsx
 #: src/pages/Dashboard/DashboardV2.js
 msgid "Dashboard"
 msgstr "Панель"
@@ -1418,10 +1423,6 @@ msgstr ""
 #: src/components/Exchange/PositionEditor.js
 #: src/components/Exchange/PositionEditor.js
 #: src/components/Synthetics/PositionEditor/PositionEditor.tsx
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Deposit"
 msgstr "Пополнение"
 
@@ -1442,8 +1443,8 @@ msgid "Deposit error."
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Deposit failed!"
-msgstr "Пополнение не состоялось!"
+#~ msgid "Deposit failed!"
+#~ msgstr "Пополнение не состоялось!"
 
 #: src/components/Exchange/PositionEditor.js
 msgid "Deposit failed."
@@ -1454,8 +1455,8 @@ msgid "Deposit not enough to cover fees"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Deposit submitted!"
-msgstr "Пополнение внесено!"
+#~ msgid "Deposit submitted!"
+#~ msgstr "Пополнение внесено!"
 
 #: src/components/Exchange/PositionEditor.js
 msgid "Deposit submitted."
@@ -1466,8 +1467,8 @@ msgid "Deposit {0} USD into {1} {longOrShortText}"
 msgstr "Внести {0} USD на {1} {longOrShortText}"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Deposited"
-msgstr "Внесено"
+#~ msgid "Deposited"
+#~ msgstr "Внесено"
 
 #: src/pages/Exchange/Exchange.js
 msgid "Deposited {0} USD into {tokenSymbol} {longOrShortText}"
@@ -1478,15 +1479,14 @@ msgid "Deposited {0} into {positionText}"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Deposited!"
-msgstr "Внесено!"
+#~ msgid "Deposited!"
+#~ msgstr "Внесено!"
 
 #: src/components/Synthetics/StatusNotification/OrderStatusNotification.tsx
 msgid "Depositing {0} to {positionText}"
 msgstr ""
 
 #: src/components/Exchange/PositionEditor.js
-#: src/pages/Stake/StakeV2.js
 msgid "Depositing..."
 msgstr "Пополнение..."
 
@@ -1525,17 +1525,16 @@ msgstr "Загрузить"
 
 #: src/components/Header/AppHeaderLinks.tsx
 #: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Earn"
 msgstr "Зарабатывать"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Earn ARB tokens by purchasing GM tokens, trading, or migrating liquidity from GLP to GM. Only for GMX V2."
-msgstr ""
+#~ msgid "Earn ARB tokens by purchasing GM tokens, trading, or migrating liquidity from GLP to GM. Only for GMX V2."
+#~ msgstr ""
 
 #: src/components/Header/AppHeaderLinks.tsx
-msgid "Ecosystem"
-msgstr "Экосистема"
+#~ msgid "Ecosystem"
+#~ msgstr "Экосистема"
 
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "Ecosystem Projects"
@@ -1722,9 +1721,6 @@ msgstr ""
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Enter an amount"
 msgstr "Введите сумму"
 
@@ -1771,8 +1767,8 @@ msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Escrowed GMX"
-msgstr "Эскроуированный GMX"
+#~ msgid "Escrowed GMX"
+#~ msgstr "Эскроуированный GMX"
 
 #: src/components/Glp/GlpSwap.js
 #: src/components/Stake/GMXAprTooltip.tsx
@@ -1840,6 +1836,23 @@ msgstr ""
 #: src/components/Glp/GlpSwap.js
 msgid "FEES"
 msgstr "СБОРЫ"
+
+#: src/components/TokenCard/TokenCard.js
+msgid "FFX is the utility and governance token. Accrues 30% markets generated fees."
+msgstr ""
+
+#: src/components/Common/SEO.js
+msgid "FFX | Decentralized Perpetual Exchange"
+msgstr ""
+
+#: src/components/Synthetics/GmList/GmList.tsx
+#: src/components/Synthetics/GmList/GmList.tsx
+msgid "FLP Pools"
+msgstr ""
+
+#: src/components/Synthetics/MarketStats/MarketStats.tsx
+msgid "FLP can be sold for {0} and {1} for this market up to the specified selling caps. The remaining tokens in the pool are reserved for currently open Positions."
+msgstr ""
 
 #: src/components/Synthetics/ClaimModal/ClaimModal.tsx
 #: src/components/Synthetics/SettleAccruedFundingFeeModal/SettleAccruedFundingFeeModal.tsx
@@ -2035,8 +2048,8 @@ msgstr "GLP Пул"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "GLP Vault"
-msgstr "Хранилище GLP"
+#~ msgid "GLP Vault"
+#~ msgstr "Хранилище GLP"
 
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "GLP and GMX autocompounding vaults"
@@ -2051,8 +2064,8 @@ msgid "GLP buy disabled, pending {0} upgrade"
 msgstr "Покупка GLP приостановлена, ожидается {0} обновление"
 
 #: src/components/TokenCard/TokenCard.js
-msgid "GLP is the liquidity provider token for GMX V1 markets. Accrues 70% of the V1 markets generated fees."
-msgstr ""
+#~ msgid "GLP is the liquidity provider token for GMX V1 markets. Accrues 70% of the V1 markets generated fees."
+#~ msgstr ""
 
 #: src/components/Glp/GlpSwap.js
 msgid "GLP sell disabled, pending {0} upgrade"
@@ -2062,8 +2075,6 @@ msgstr "Продажа GLP приостановлена, ожидается {0} 
 msgid "GLP to GM migration has reduced Fees due to STIP incentives. <0>Read more</0>."
 msgstr ""
 
-#: src/components/Synthetics/GmList/GmList.tsx
-#: src/components/Synthetics/GmList/GmList.tsx
 #: src/components/Synthetics/MarketsList/MarketsList.tsx
 #: src/components/Synthetics/MarketsList/MarketsList.tsx
 #: src/pages/Dashboard/DashboardV2.js
@@ -2075,12 +2086,12 @@ msgid "GM Token pricing includes positions' Pending PnL, Impact Pool Amount and 
 msgstr ""
 
 #: src/components/Synthetics/MarketStats/MarketStats.tsx
-msgid "GM can be sold for {0} and {1} for this market up to the specified selling caps. The remaining tokens in the pool are reserved for currently open Positions."
-msgstr ""
+#~ msgid "GM can be sold for {0} and {1} for this market up to the specified selling caps. The remaining tokens in the pool are reserved for currently open Positions."
+#~ msgstr ""
 
 #: src/components/TokenCard/TokenCard.js
-msgid "GM is the liquidity provider token for GMX V2 markets. Accrues 63% of the V2 markets generated fees."
-msgstr ""
+#~ msgid "GM is the liquidity provider token for GMX V2 markets. Accrues 63% of the V2 markets generated fees."
+#~ msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "GMX Announcements and Updates"
@@ -2128,8 +2139,8 @@ msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "GMX Vault"
-msgstr "Хранилище GMX"
+#~ msgid "GMX Vault"
+#~ msgstr "Хранилище GMX"
 
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "GMX Weekly Updates"
@@ -2168,8 +2179,8 @@ msgid "GMX is not actively looking for new hires at the moment. However, if you 
 msgstr "В настоящее время GMX не ведет активного поиска новых сотрудников. Однако, если вы считаете, что можете внести свой вклад в проект, пожалуйста, напишите <0>jobs@gmx.io</0>."
 
 #: src/components/TokenCard/TokenCard.js
-msgid "GMX is the utility and governance token. Accrues 30% and 27% of V1 and V2 markets generated fees, respectively."
-msgstr ""
+#~ msgid "GMX is the utility and governance token. Accrues 30% and 27% of V1 and V2 markets generated fees, respectively."
+#~ msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "GMX staking calculator"
@@ -2185,12 +2196,12 @@ msgstr "Обновления и информация о вознагражден
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "GMX transfers not yet enabled"
-msgstr "Перевод GMX еще не активирован"
+#~ msgid "GMX transfers not yet enabled"
+#~ msgstr "Перевод GMX еще не активирован"
 
 #: src/components/Common/SEO.js
-msgid "GMX | Decentralized Perpetual Exchange"
-msgstr ""
+#~ msgid "GMX | Decentralized Perpetual Exchange"
+#~ msgstr ""
 
 #: src/components/Synthetics/SubaccountModal/utils.ts
 msgid "Generate & Activate Subaccount"
@@ -2251,8 +2262,8 @@ msgid "Inc."
 msgstr "Инк."
 
 #: src/pages/Stake/StakeV2.js
-msgid "Incentives"
-msgstr ""
+#~ msgid "Incentives"
+#~ msgstr ""
 
 #: src/components/Synthetics/UserIncentiveDistributionList/UserIncentiveDistributionList.tsx
 msgid "Incentives Distribution History"
@@ -2396,8 +2407,8 @@ msgid "Insufficient receive token liquidity"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Insufficient staked tokens"
-msgstr "Недостаточное количество поставленных токенов"
+#~ msgid "Insufficient staked tokens"
+#~ msgstr "Недостаточное количество поставленных токенов"
 
 #: src/components/Exchange/SwapBox.js
 #: src/components/Exchange/SwapBox.js
@@ -2506,8 +2517,6 @@ msgstr ""
 msgid "Language"
 msgstr "Язык"
 
-#: src/components/Header/AppHeaderUser.tsx
-#: src/components/Header/AppHeaderUser.tsx
 #: src/components/ModalViews/RedirectModal.js
 #: src/pages/Home/Home.js
 msgid "Launch App"
@@ -2687,8 +2696,12 @@ msgid "Liquidation price would cross mark price."
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Liquidity and trading incentives program is live on Arbitrum. <0>Read more</0>."
-msgstr ""
+#~ msgid "Liquidity and trading incentives program is live on Arbitrum. <0>Read more</0>."
+#~ msgstr ""
+
+#: src/pages/Stake/StakeV2.js
+#~ msgid "Liquidity and trading incentives program is live on Blast. <0>Read more</0>."
+#~ msgstr ""
 
 #: src/components/Exchange/SwapBox.js
 #: src/components/Exchange/SwapBox.js
@@ -2906,9 +2919,6 @@ msgstr ""
 #: src/components/Exchange/PositionSeller.js
 #: src/components/Synthetics/PositionEditor/PositionEditor.tsx
 #: src/components/Synthetics/PositionSeller/PositionSeller.tsx
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Max"
 msgstr ""
 
@@ -2921,8 +2931,8 @@ msgid "Max Bonus Rebate"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Max Capacity"
-msgstr "Максимальная Вместимость"
+#~ msgid "Max Capacity"
+#~ msgstr "Максимальная Вместимость"
 
 #: src/components/Glp/GlpSwap.js
 msgid "Max Capacity for {0} Reached"
@@ -2965,9 +2975,6 @@ msgstr ""
 #: src/components/Migration/Migration.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Max amount exceeded"
 msgstr "Максимальная сумма превышена"
 
@@ -3061,12 +3068,12 @@ msgid "Max {0} short exceeded"
 msgstr "Максимальное {0} превышение шорта"
 
 #: src/components/TokenCard/TokenCard.js
-msgid "Max. Arbitrum APR:"
-msgstr ""
+#~ msgid "Max. Arbitrum APR:"
+#~ msgstr ""
 
 #: src/components/TokenCard/TokenCard.js
-msgid "Max. Avalanche APR: {0}"
-msgstr ""
+#~ msgid "Max. Avalanche APR: {0}"
+#~ msgstr ""
 
 #: src/domain/synthetics/trade/utils/validation.ts
 msgid "Max. Leverage exceeded"
@@ -3175,12 +3182,12 @@ msgid "More Options"
 msgstr "Больше вариантов"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Multiplier Points"
-msgstr "Множители баллов"
+#~ msgid "Multiplier Points"
+#~ msgstr "Множители баллов"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Multiplier Points APR"
-msgstr "Множитель баллов APR"
+#~ msgid "Multiplier Points APR"
+#~ msgstr "Множитель баллов APR"
 
 #: src/components/Synthetics/AcceptablePriceImpactInputRow/AcceptablePriceImpactInputRow.tsx
 msgid "NA"
@@ -3718,9 +3725,6 @@ msgstr "Предыдущий"
 #: src/pages/Dashboard/DashboardV2.js
 #: src/pages/Dashboard/DashboardV2.js
 #: src/pages/OrdersOverview/OrdersOverview.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Price"
 msgstr "Цена"
 
@@ -3827,12 +3831,10 @@ msgid "Price is below Mark Price"
 msgstr "Цена ниже Маркированной Цены"
 
 #: src/pages/Dashboard/DashboardV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Price on Arbitrum"
 msgstr "Цена на Arbitrum"
 
 #: src/pages/Dashboard/DashboardV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Price on Avalanche"
 msgstr "Цена на Avalanche"
 
@@ -3870,20 +3872,18 @@ msgid "Purchase <0>GLP tokens</0> to earn {nativeTokenSymbol} fees from swaps an
 msgstr ""
 
 #: src/pages/MarketPoolsPage/MarketPoolsPage.tsx
-msgid "Purchase <0>GM Tokens</0> to earn fees from swaps and leverage trading."
-msgstr ""
+#~ msgid "Purchase <0>GM Tokens</0> to earn fees from swaps and leverage trading."
+#~ msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Purchase Insurance"
-msgstr "Приобрести Страховку"
+#~ msgid "Purchase Insurance"
+#~ msgstr "Приобрести Страховку"
 
 #: src/components/Synthetics/AccruedPositionPriceImpactRebateModal/AccruedPositionPriceImpactRebateModal.tsx
 #: src/components/Synthetics/ClaimablePositionPriceImpactRebateModal/ClaimablePositionPriceImpactRebateModal.tsx
 msgid "REBATE"
 msgstr ""
 
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
 #: src/components/TokenCard/TokenCard.js
 msgid "Read more"
 msgstr "Читать больше"
@@ -4020,7 +4020,6 @@ msgstr "Обновление реферального кода не прошло
 msgid "Referral code updated!"
 msgstr "Реферальный код обновлен!"
 
-#: src/components/Header/AppHeaderLinks.tsx
 #: src/pages/Referrals/Referrals.tsx
 #: src/pages/Referrals/Referrals.tsx
 msgid "Referrals"
@@ -4068,8 +4067,8 @@ msgid "Requested withdrawal of {0} USD from {1} {longOrShortText}."
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Reserve Amount"
-msgstr "Сумма Резерва"
+#~ msgid "Reserve Amount"
+#~ msgstr "Сумма Резерва"
 
 #: src/components/Synthetics/MarketCard/MarketCard.tsx
 msgid "Reserve considers the PnL of Open Positions, while Open Interest does not."
@@ -4081,8 +4080,8 @@ msgstr "Зарезервировано"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Reserved for Vesting"
-msgstr "Зарезервировано для Вестинга"
+#~ msgid "Reserved for Vesting"
+#~ msgstr "Зарезервировано для Вестинга"
 
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "Returns calculator for GMX and GLP"
@@ -4094,8 +4093,6 @@ msgstr "Калькулятор возвратов для GMX и GLP"
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Rewards"
 msgstr "Вознаграждения"
 
@@ -4195,6 +4192,11 @@ msgstr "Самостоятельный перевод не поддержива�
 msgid "Sell"
 msgstr ""
 
+#: src/components/Synthetics/GmSwap/GmSwapBox/GmSwapBox.tsx
+#: src/components/Synthetics/GmSwap/GmSwapBox/GmSwapBox.tsx
+msgid "Sell FLP"
+msgstr ""
+
 #: src/components/Synthetics/GmSwap/GmFees/GmFees.tsx
 msgid "Sell Fee"
 msgstr ""
@@ -4203,14 +4205,12 @@ msgstr ""
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
-#: src/pages/Stake/StakeV2.js
 msgid "Sell GLP"
 msgstr "Продать GLP"
 
 #: src/components/Synthetics/GmSwap/GmSwapBox/GmSwapBox.tsx
-#: src/components/Synthetics/GmSwap/GmSwapBox/GmSwapBox.tsx
-msgid "Sell GM"
-msgstr ""
+#~ msgid "Sell GM"
+#~ msgstr ""
 
 #: src/components/Glp/GlpSwap.js
 msgid "Sell failed."
@@ -4242,8 +4242,12 @@ msgid "Sellable"
 msgstr ""
 
 #: src/components/Synthetics/GmSwap/GmConfirmationBox/GmConfirmationBox.tsx
-msgid "Selling GM..."
+msgid "Selling FLP..."
 msgstr ""
+
+#: src/components/Synthetics/GmSwap/GmConfirmationBox/GmConfirmationBox.tsx
+#~ msgid "Selling GM..."
+#~ msgstr ""
 
 #: src/components/Glp/GlpSwap.js
 msgid "Selling..."
@@ -4481,48 +4485,48 @@ msgstr "Процент Стабильной монеты"
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Stake"
 msgstr "Стакинг"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake <0>GMX</0> and buy <1>GM</1> or <2>GLP</2> to earn rewards."
+msgid "Stake <0>FFX</0> to earn rewards."
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake GMX"
-msgstr "Стакинг GMX"
+#~ msgid "Stake <0>GMX</0> and buy <1>GM</1> or <2>GLP</2> to earn rewards."
+#~ msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake GMX Rewards"
-msgstr "Вознаграждения Стакинг GMX"
+#~ msgid "Stake GMX"
+#~ msgstr "Стакинг GMX"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake Multiplier Points"
-msgstr "Стакинг Множителя Баллов"
+#~ msgid "Stake GMX Rewards"
+#~ msgstr "Вознаграждения Стакинг GMX"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake esGMX"
-msgstr "Стакинг esGMX"
+#~ msgid "Stake Multiplier Points"
+#~ msgstr "Стакинг Множителя Баллов"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake esGMX Rewards"
-msgstr "Вознаграждения Стакинг esGMX"
+#~ msgid "Stake esGMX"
+#~ msgstr "Стакинг esGMX"
+
+#: src/pages/Stake/StakeV2.js
+#~ msgid "Stake esGMX Rewards"
+#~ msgstr "Вознаграждения Стакинг esGMX"
 
 #: src/pages/Stake/StakeV1.js
 msgid "Stake failed"
 msgstr "Стакинг не прошла"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake failed."
-msgstr "Стакинг не прошла."
+#~ msgid "Stake failed."
+#~ msgstr "Стакинг не прошла."
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake submitted!"
-msgstr "Стакинг принята!"
+#~ msgid "Stake submitted!"
+#~ msgstr "Стакинг принята!"
 
 #: src/pages/Stake/StakeV1.js
 msgid "Stake submitted! <0>View status.</0>"
@@ -4534,23 +4538,19 @@ msgstr "Стакинг принята! <0>Смотреть статус.</0>"
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Staked"
 msgstr "Стакинг"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Staked Multiplier Points"
-msgstr "Стакинг Множителя Баллов"
+#~ msgid "Staked Multiplier Points"
+#~ msgstr "Стакинг Множителя Баллов"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Staked Tokens"
-msgstr "Стакинг Токенов"
+#~ msgid "Staked Tokens"
+#~ msgstr "Стакинг Токенов"
 
 #: src/pages/Stake/StakeV1.js
-#: src/pages/Stake/StakeV2.js
 msgid "Staking..."
 msgstr "Размещение стакинга..."
 
@@ -5114,7 +5114,6 @@ msgstr ""
 #: src/components/Referrals/AffiliatesStats.tsx
 #: src/components/Referrals/TradersStats.tsx
 #: src/components/Referrals/TradersStats.tsx
-#: src/pages/Stake/StakeV2.js
 msgid "Total"
 msgstr "Итого"
 
@@ -5135,8 +5134,8 @@ msgid "Total Rebates"
 msgstr "Всего Ребайтов"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Total Rewards"
-msgstr "Общее Вознаграждение"
+#~ msgid "Total Rewards"
+#~ msgstr "Общее Вознаграждение"
 
 #: src/pages/Dashboard/DashboardV2.js
 #: src/pages/Dashboard/DashboardV2.js
@@ -5145,9 +5144,6 @@ msgstr "Общее Вознаграждение"
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Total Staked"
 msgstr "Всего Ставок"
 
@@ -5160,9 +5156,6 @@ msgstr "Общая Статистика"
 #: src/components/Synthetics/MarketStats/MarketStats.tsx
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Total Supply"
 msgstr "Общее количество снабжения"
 
@@ -5194,8 +5187,8 @@ msgstr "Всего:"
 
 #: src/components/Header/AppHeaderUser.tsx
 #: src/components/Header/AppHeaderUser.tsx
-msgid "Trade"
-msgstr "Торговля"
+#~ msgid "Trade"
+#~ msgstr "Торговля"
 
 #: src/pages/Home/Home.js
 msgid "Trade BTC, ETH, AVAX and other top cryptocurrencies with up to 50x leverage directly from your wallet"
@@ -5281,7 +5274,6 @@ msgid "Transaction was cancelled."
 msgstr "Транзакция отменена."
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-#: src/pages/Stake/StakeV2.js
 msgid "Transfer Account"
 msgstr "Счет для Перевода"
 
@@ -5413,47 +5405,42 @@ msgstr ""
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Unstake"
 msgstr "Снять стакинг"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Unstake GMX"
-msgstr "Снять стакинга с GMX"
+#~ msgid "Unstake GMX"
+#~ msgstr "Снять стакинга с GMX"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Unstake completed!"
-msgstr "Снятие стакинга завершено!"
+#~ msgid "Unstake completed!"
+#~ msgstr "Снятие стакинга завершено!"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Unstake esGMX"
-msgstr "Снять стакинга с esGMX"
+#~ msgid "Unstake esGMX"
+#~ msgstr "Снять стакинга с esGMX"
 
 #: src/pages/Stake/StakeV1.js
 msgid "Unstake failed"
 msgstr "Снятие стакинга не прошло"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Unstake failed."
-msgstr "Снятие стакинга не прошло."
+#~ msgid "Unstake failed."
+#~ msgstr "Снятие стакинга не прошло."
 
 #: src/pages/Stake/StakeV2.js
-msgid "Unstake submitted!"
-msgstr "Снятие стакинга подтверждено!"
+#~ msgid "Unstake submitted!"
+#~ msgstr "Снятие стакинга подтверждено!"
 
 #: src/pages/Stake/StakeV1.js
 msgid "Unstake submitted! <0>View status.</0>"
 msgstr "Снятие стакинга подтверждено! <0>Посмотреть статус.</0>"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Unstaking will burn <0>{0} Multiplier Points</0>. <1>You will earn {1}% less {nativeTokenSymbol} rewards with this action.</1>"
-msgstr ""
+#~ msgid "Unstaking will burn <0>{0} Multiplier Points</0>. <1>You will earn {1}% less {nativeTokenSymbol} rewards with this action.</1>"
+#~ msgstr ""
 
 #: src/pages/Stake/StakeV1.js
-#: src/pages/Stake/StakeV2.js
 msgid "Unstaking..."
 msgstr "Снятие стакинга..."
 
@@ -5501,8 +5488,8 @@ msgid "Use the \"Close\" button to reduce your Position Size."
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Use the \"Compound\" button to stake your Multiplier Points."
-msgstr "Используйте кнопку \"Сложить\", чтобы проставить Баллы Множителя."
+#~ msgid "Use the \"Compound\" button to stake your Multiplier Points."
+#~ msgstr "Используйте кнопку \"Сложить\", чтобы проставить Баллы Множителя."
 
 #: src/components/Exchange/PositionsList.js
 #: src/components/Exchange/PositionsList.js
@@ -5607,16 +5594,16 @@ msgid "V2 is newly live, and liquidity may be low initially."
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Vault Capacity"
-msgstr "Вместимость Хранилища"
+#~ msgid "Vault Capacity"
+#~ msgstr "Вместимость Хранилища"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Vault Capacity for your Account:"
-msgstr "Вместимость Хранилища для вашего Счета:"
+#~ msgid "Vault Capacity for your Account:"
+#~ msgstr "Вместимость Хранилища для вашего Счета:"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Vest"
-msgstr "Вестинг"
+#~ msgid "Vest"
+#~ msgstr "Вестинг"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
 msgid "Vest with GLP on Arbitrum"
@@ -5644,8 +5631,8 @@ msgstr "Вестинг GMX не выведен"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Vesting Status"
-msgstr "Вестинг Статус"
+#~ msgid "Vesting Status"
+#~ msgstr "Вестинг Статус"
 
 #: src/App/App.js
 #: src/lib/contracts/notifications.tsx
@@ -5725,10 +5712,6 @@ msgstr "Ожидайте одобрения"
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Wallet"
 msgstr "Кошелёк"
 
@@ -5775,8 +5758,6 @@ msgstr "При закрытии позиции вы можете выбрать,
 #: src/components/Exchange/PositionEditor.js
 #: src/components/Synthetics/PositionEditor/PositionEditor.tsx
 #: src/components/Synthetics/SubaccountModal/SubaccountModal.tsx
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Withdraw"
 msgstr "Вывод"
 
@@ -5785,20 +5766,20 @@ msgid "Withdraw disabled, pending {0} upgrade"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Withdraw failed."
-msgstr "Вывод не прошёл."
+#~ msgid "Withdraw failed."
+#~ msgstr "Вывод не прошёл."
 
 #: src/pages/Stake/StakeV2.js
-msgid "Withdraw from GLP Vault"
-msgstr "Вывод из хранилища GLP"
+#~ msgid "Withdraw from GLP Vault"
+#~ msgstr "Вывод из хранилища GLP"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Withdraw from GMX Vault"
-msgstr "Вывод из хранилища GMX"
+#~ msgid "Withdraw from GMX Vault"
+#~ msgstr "Вывод из хранилища GMX"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Withdraw submitted."
-msgstr "Вывод подтверждён"
+#~ msgid "Withdraw submitted."
+#~ msgstr "Вывод подтверждён"
 
 #: src/components/Exchange/TradeHistory.js
 msgid "Withdraw {0} USD from {1}{longOrShortText}"
@@ -5826,8 +5807,8 @@ msgid "Withdrawing..."
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Withdrawn!"
-msgstr "Выведено!"
+#~ msgid "Withdrawn!"
+#~ msgstr "Выведено!"
 
 #: src/pages/Exchange/Exchange.js
 msgid "Withdrew {0} USD from {tokenSymbol} {longOrShortText}."
@@ -5854,12 +5835,12 @@ msgid "Yield simulator for GMX"
 msgstr "Симулятор доходности для GMX"
 
 #: src/pages/Stake/StakeV2.js
-msgid "You are earning rewards with {0} tokens.<0/>Tokens: {amountStr}."
-msgstr ""
+#~ msgid "You are earning rewards with {0} tokens.<0/>Tokens: {amountStr}."
+#~ msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "You are earning {0}% more {nativeTokenSymbol} rewards using {1} Staked Multiplier Points."
-msgstr "Вы зарабатываете {0}% больше {nativeTokenSymbol} вознаграждений, используя {1} Ставку Множителя Бонусов."
+#~ msgid "You are earning {0}% more {nativeTokenSymbol} rewards using {1} Staked Multiplier Points."
+#~ msgstr "Вы зарабатываете {0}% больше {nativeTokenSymbol} вознаграждений, используя {1} Ставку Множителя Бонусов."
 
 #: src/components/ModalViews/RedirectModal.js
 msgid "You are leaving GMX.io and will be redirected to a third party, independent website."
@@ -5959,16 +5940,16 @@ msgstr "У вас есть несколько существующих на ув
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "You have not deposited any tokens for vesting."
-msgstr "Вы не внесли ни одного токена для вестнига."
+#~ msgid "You have not deposited any tokens for vesting."
+#~ msgstr "Вы не внесли ни одного токена для вестнига."
 
 #: src/pages/Stake/StakeV2.js
-msgid "You have reached the maximum Boost Percentage. Stake an additional {0} GMX or esGMX to be able to stake your unstaked {1} Multiplier Points using the \"Compound\" button."
-msgstr ""
+#~ msgid "You have reached the maximum Boost Percentage. Stake an additional {0} GMX or esGMX to be able to stake your unstaked {1} Multiplier Points using the \"Compound\" button."
+#~ msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "You have reached the maximum Boost Percentage. Stake an additional {0} GMX or esGMX to be able to stake your unstaked {1} Multiplier Points."
-msgstr ""
+#~ msgid "You have reached the maximum Boost Percentage. Stake an additional {0} GMX or esGMX to be able to stake your unstaked {1} Multiplier Points."
+#~ msgstr ""
 
 #: src/components/Synthetics/ConfirmationBox/ConfirmationBox.tsx
 msgid "You have selected {collateralTokenSymbol} as Collateral, the Liquidation Price will vary based on the price of {collateralTokenSymbol}."
@@ -5991,8 +5972,8 @@ msgid "You have {0} esGMX (IOU) tokens."
 msgstr "У вас есть {0} токенов esGMX."
 
 #: src/pages/Stake/StakeV2.js
-msgid "You need a total of at least {0} {stakeTokenLabel} to vest {1} esGMX."
-msgstr "Чтобы вестить {1} esGMX, вам нужно в общей сложности не менее {0} {stakeTokenLabel}."
+#~ msgid "You need a total of at least {0} {stakeTokenLabel} to vest {1} esGMX."
+#~ msgstr "Чтобы вестить {1} esGMX, вам нужно в общей сложности не менее {0} {stakeTokenLabel}."
 
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
 msgid "You need to select {swapTokenSymbol} as the \"Pay\" token to use it for collateral to initiate this trade."
@@ -6144,8 +6125,8 @@ msgstr "{0} GLP проданы для {1} {2}!"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "{0} GMX tokens can be claimed, use the options under the Total Rewards section to claim them."
-msgstr "{0} токены GMX можно получить, используя опции в разделе Общие Вознаграждения, чтобы получить их."
+#~ msgid "{0} GMX tokens can be claimed, use the options under the Total Rewards section to claim them."
+#~ msgstr "{0} токены GMX можно получить, используя опции в разделе Общие Вознаграждения, чтобы получить их."
 
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
 msgid "{0} Pool Capacity Reached"
@@ -6166,17 +6147,25 @@ msgstr "{0} Цена"
 msgid "{0} Required"
 msgstr "{0} Требуется"
 
+#: src/components/Synthetics/GmList/GmList.tsx
+msgid "{0} and {1} can be used to buy FLP tokens for this market up to the specified buying caps."
+msgstr ""
+
 #: src/components/Synthetics/MarketStats/MarketStats.tsx
 msgid "{0} and {1} can be used to buy GM for this market up to the specified buying caps."
 msgstr ""
 
 #: src/components/Synthetics/GmList/GmList.tsx
-msgid "{0} and {1} can be used to buy GM tokens for this market up to the specified buying caps."
+#~ msgid "{0} and {1} can be used to buy GM tokens for this market up to the specified buying caps."
+#~ msgstr ""
+
+#: src/components/Synthetics/MarketStats/MarketStats.tsx
+msgid "{0} can be used to buy FLP for this market up to the specified buying caps."
 msgstr ""
 
 #: src/components/Synthetics/MarketStats/MarketStats.tsx
-msgid "{0} can be used to buy GM for this market up to the specified buying caps."
-msgstr ""
+#~ msgid "{0} can be used to buy GM for this market up to the specified buying caps."
+#~ msgstr ""
 
 #: src/domain/synthetics/trade/utils/validation.ts
 msgid "{0} can not be sent to smart contract addresses. Select another token."
@@ -6213,8 +6202,8 @@ msgstr "{0} выбран в форме ордера"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "{0} tokens have been converted to GMX from the {1} esGMX deposited for vesting."
-msgstr "{0} токены были конвертированы в GMX из {1} esGMX внесенные для вестинга."
+#~ msgid "{0} tokens have been converted to GMX from the {1} esGMX deposited for vesting."
+#~ msgstr "{0} токены были конвертированы в GMX из {1} esGMX внесенные для вестинга."
 
 #: src/components/Synthetics/ConfirmationBox/ConfirmationBox.tsx
 #: src/components/Synthetics/OrderItem/OrderItem.tsx

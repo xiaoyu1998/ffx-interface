@@ -26,7 +26,7 @@ export const GmTokensBalanceInfo = ({
   const shouldShowIncentivesNote = useLpIncentivesIsActive();
   const content = (
     <>
-      {formatTokenAmount(token.balance, token.decimals, "GM", {
+      {formatTokenAmount(token.balance, token.decimals, "FLP", {
         useCommas: true,
         displayDecimals: 2,
         fallbackToZero: true,
@@ -98,7 +98,7 @@ export const GmTokensTotalBalanceInfo = ({
   const daysConsidered = useDaysConsideredInMarketsApr();
   const walletTotalValue = useMemo(
     () => [
-      formatTokenAmount(balance, 18, "GM", {
+      formatTokenAmount(balance, 18, "FLP", {
         useCommas: true,
         fallbackToZero: true,
       }),

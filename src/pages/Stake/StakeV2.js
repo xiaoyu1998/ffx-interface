@@ -103,18 +103,6 @@ export default function StakeV2({ setPendingTxns }) {
             <Trans>
               Stake <ExternalLink href="https://docs.gmx.io/docs/tokenomics/gmx-token">FFX</ExternalLink> to earn rewards.
             </Trans>
-            <div>
-              <Trans>
-                Liquidity and trading incentives program is live on Blast.{" "}
-                <ExternalLink
-                  newTab
-                  href="https://gmxio.notion.site/GMX-S-T-I-P-Incentives-Distribution-1a5ab9ca432b4f1798ff8810ce51fec3"
-                >
-                  Read more
-                </ExternalLink>
-                .
-              </Trans>
-            </div>
           </div>
         }
       />

@@ -108,10 +108,10 @@ export default function MarketTokenSelector(props: Props) {
                       />
                       <div className="Market-index-name">
                         <div className="items-center">
-                          <span>GM{indexName && `: ${indexName}`}</span>
+                          <span>FLP{indexName && `: ${indexName}`}</span>
                           <span className="subtext">{poolName && `[${poolName}]`}</span>
                         </div>
-                        <div className="Market-subtext">GMX Market Tokens</div>
+                        <div className="Market-subtext">FLP Market Tokens</div>
                       </div>
                     </>
                   )}

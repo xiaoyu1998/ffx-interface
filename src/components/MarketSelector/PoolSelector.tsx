@@ -123,7 +123,7 @@ export function PoolSelector({
 
   function displayPoolLabel(marketInfo: MarketInfo | undefined) {
     if (!marketInfo) return "...";
-    const name = showAllPools ? `GM: ${getMarketIndexName(marketInfo)}` : getMarketPoolName(marketInfo);
+    const name = showAllPools ? `FLP: ${getMarketIndexName(marketInfo)}` : getMarketPoolName(marketInfo);
 
     if (filteredOptions?.length > 1) {
       return (
@@ -221,7 +221,7 @@ export function PoolSelector({
                   {showBalances && balance && (
                     <div className="Token-text">
                       {balance.gt(0) &&
-                        formatTokenAmount(balance, marketToken?.decimals, "GM", {
+                        formatTokenAmount(balance, marketToken?.decimals, "FLP", {
                           useCommas: true,
                         })}
                       {balance.eq(0) && "-"}

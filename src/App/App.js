@@ -12,9 +12,8 @@ import { getAppBaseUrl, isHomeSite, REFERRAL_CODE_QUERY_PARAM } from "lib/legacy
 import { decodeReferralCode, encodeReferralCode } from "domain/referrals";
 import Actions from "pages/Actions/Actions";
 import BeginAccountTransfer from "pages/BeginAccountTransfer/BeginAccountTransfer";
-import Buy from "pages/Buy/Buy";
-import BuyGlp from "pages/BuyGlp/BuyGlp";
-import BuyFFX from "pages/BuyFFX/BuyFFX";
+// import Buy from "pages/Buy/Buy";
+// import BuyFFX from "pages/BuyFFX/BuyFXX";
 import ClaimEsGmx from "pages/ClaimEsGmx/ClaimEsGmx";
 import CompleteAccountTransfer from "pages/CompleteAccountTransfer/CompleteAccountTransfer";
 import Dashboard from "pages/Dashboard/Dashboard";
@@ -368,9 +367,6 @@ function FullApp({ pendingTxns, setPendingTxns }) {
               <Route exact path="/earn">
                 <Stake setPendingTxns={setPendingTxns} />
               </Route>
-              <Route exact path="/buy">
-                <Buy savedSlippageAmount={settings.savedAllowedSlippage} setPendingTxns={setPendingTxns} />
-              </Route>
               <Route exact path="/pools">
                 {getIsSyntheticsSupported(chainId) ? (
                   <MarketPoolsPage
@@ -405,9 +401,6 @@ function FullApp({ pendingTxns, setPendingTxns }) {
                 ) : (
                   <SyntheticsFallbackPage />
                 )}
-              </Route>
-              <Route exact path="/buy_gmx">
-                <BuyFFX />
               </Route>
               <Route exact path="/actions">
                 <SyntheticsStateContextProvider
